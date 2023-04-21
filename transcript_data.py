@@ -43,7 +43,7 @@ class DownloadTranscriptTask(d6tflow.tasks.TaskPickle):
             return d6tflow.targets.PickleTarget('more_videos_data.pkl')
 
     def run(self):
-        if type(self.video_id) is list:
+        if isinstance(self.video_id, list):
             transcripts_pkl = {}
             for vid in self.video_id:
                 self.video_id = vid

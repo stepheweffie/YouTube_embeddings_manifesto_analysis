@@ -7,7 +7,6 @@ from manifesto_data import extract_pdf_text
 load_dotenv()
 
 
-
 # Load BERT model and tokenizer
 bert_model = TFBertModel.from_pretrained('bert-base-uncased')
 bert_tokenizer = TFBertTokenizer.from_pretrained('bert-base-uncased')
@@ -47,4 +46,4 @@ df = pd.DataFrame({
 if __name__ == '__main__':
     import subprocess
     subprocess.run('tokens_to_embedding_bert.py')
-    subprocess.run('plot.py')
+    subprocess.run('embeddings_plot.py')
