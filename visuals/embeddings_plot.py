@@ -1,6 +1,6 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
-from tokens_to_embedding_bert import extract_pdf_text, extract_youtube_transcript, df, pdf_file_path, youtube_video_id
+from transformers.tokens_to_embedding_bert import extract_pdf_text, extract_youtube_transcript, df, pdf_file_path, youtube_video_id
 import numpy as np
 import pandas as pd
 # Assuming that the `df` dataframe has already been generated

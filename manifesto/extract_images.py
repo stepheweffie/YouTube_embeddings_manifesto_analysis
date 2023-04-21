@@ -7,8 +7,8 @@ pdf = os.environ.get('PDF_FILE_PATH')
 pdf_doc = fitz.Document(pdf)
 
 # Create the 'images' directory if it does not exist
-if not os.path.exists("images"):
-    os.mkdir("images")
+if not os.path.exists("../images"):
+    os.mkdir("../images")
 
 # Loop through each page in the PDF
 for page in pdf_doc:
