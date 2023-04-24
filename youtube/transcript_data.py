@@ -1,22 +1,15 @@
 import json
-from youtube_transcript_api import YouTubeTranscriptApi
 import d6tflow
 import pickle
 import os
 from dotenv import load_dotenv
+from download_transcript import download_transcript
 from youtube_transcript_api.formatters import JSONFormatter
 load_dotenv()
 # List of Video IDs
 video = [0]
 # The Video ID For A Single Video Stored In .env
 stored_video = os.environ['YOUTUBE_VIDEO_ID']
-
-# Return the transcript as a list of dicts
-
-
-def download_transcript(video_id, language_code):
-    transcript_data = YouTubeTranscriptApi.get_transcript(video_id=video_id, languages=[language_code])
-    return transcript_data
 
 # Format transcript to JSON runs as transcript = download_transcript(video_id, language_code) format_to_json(transcript)
 

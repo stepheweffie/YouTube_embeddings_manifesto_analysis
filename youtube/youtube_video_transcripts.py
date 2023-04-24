@@ -2,8 +2,10 @@ import pickle
 import argparse
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
+import pandas as pd
 import os
-from transcript_data import download_transcript
+import d6tflow
+from download_transcript import download_transcript
 from youtube_transcript_api._errors import NoTranscriptFound, TranscriptsDisabled, NoTranscriptAvailable
 import scrapetube
 
@@ -65,6 +67,17 @@ def process_video_transcripts(channel_url):
                 pass
     except RuntimeError:
         print("RuntimeError")
+
+
+# Load pkl to df
+
+class LoadTranscripts(d6tflow.tasks.TaskPqPandas):
+    def run(self):
+        directory = []
+        transcript = ''
+        for transcripts in directory:
+            transcripts = pd.read_pickle(transcript)
+            self.save(transcripts)
 
 
 def main(channel_url):
