@@ -2,7 +2,6 @@ import os
 from dotenv import load_dotenv
 import tiktoken
 load_dotenv()
-# text = os.getenv('PDF_TEXT')
 
 
 def count_embedding_tokens(text):
@@ -48,7 +47,6 @@ def count_embedding_tokens(text):
                             tokens[ith] = token_list_slice + tokens[ith]
                         else:
                             return counted_tokens
-
                     else:
                         return counted_tokens
         else:
@@ -63,5 +61,3 @@ def count_embedding_tokens(text):
         return tokens
 
 
-# token_bytes = [encoding.decode_single_token_bytes(token) for token in tokens]
-# tokens = dict(zip(tokens, token_bytes))

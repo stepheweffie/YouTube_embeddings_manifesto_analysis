@@ -32,12 +32,12 @@ def get_video_ids(channel_id):
 # Get the last video to update the data
 
 
-def get_latest_video(channel_id):
+def get_latest_videos(channel_id):
     request = youtube.search().list(
         part="snippet",
         channelId=channel_id,
         order="date",
-        maxResults=1,
+        maxResults=50,
         type="video",
     )
     response = request.execute()

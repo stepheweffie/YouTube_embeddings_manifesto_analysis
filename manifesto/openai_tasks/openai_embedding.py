@@ -1,5 +1,4 @@
 import os
-
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 import openai
 from dotenv import load_dotenv

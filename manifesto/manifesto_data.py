@@ -18,7 +18,6 @@ pdf_text = os.getenv('PDF_TEXT')
 
 def extract_pdf_text(file_path):
     text = extract_text(file_path)
-    # print(text)
     with open('manifesto.txt', 'w') as f:
         f.write(text)
         return f
@@ -34,8 +33,12 @@ def sentence_df():
         # Clean the sentences by removing special characters and numbers
         re.sub(r'\s+', ' ', pdf_sentences).strip()
         doc_sents = [sent.text for sent in sentences.sents]
-        # Add the cleaned sentences to the dataframe
         df = pd.DataFrame(data=doc_sents, columns=["sentences"])
+        # Remove hyperlinks rows
+        mask = df['sentences'].str.contains("hyperlinks")
+        # Slice the DataFrame to exclude the rows that contain the word "Hyperlink"
+        df = df[~mask]
+        print(df["sentences"][100:200])
         return df
 
 
@@ -45,31 +48,31 @@ def map_tokens():
     text = text['sentences'].tolist()
     tokens = count_embedding_tokens(text)
     decoder = tiktoken.encoding_for_model(os.getenv("OPENAI_MODEL"))
-    for token in tokens:
-        token_map.append(decoder.decode(token))
+    for token_list in tokens:
+        print(len(token_list))
+        token_map.append(decoder.decode(token_list))
     token_map = [tokens, token_map]
+    print(len(tokens), len(token_map))
     return token_map
 
 
-def openai_pdf_embedding():
+def openai_pdf_embeddings():
     # Maximum tokens for the text-embedding-ada-002 model is 8191 per call
     text = map_tokens()
     text = text[1]
     embeddings = list()
     openai.api_key = api_key
     for chunk in text:
-
         embedding = openai.Embedding.create(
             input=chunk, model="text-embedding-ada-002"
         )["data"][0]["embedding"]
         embeddings += embedding
-
-    df = pd.DataFrame(data=embeddings)
-    df['sent_tokens'] = text[0]
+    df = pd.DataFrame(data=embeddings, columns=['embeddings'])
+    print(len(df))
     print(df.head())
     return df
 
 
-openai_pdf_embedding()
+openai_pdf_embeddings()
 # map_tokens()
-
+# sentence_df()
