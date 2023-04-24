@@ -3,7 +3,7 @@ import pandas as pd
 import tensorflow as tf
 from transformers import TFBertTokenizer, TFBertModel, TFAutoModelForTokenClassification, TFAutoModel
 from dotenv import load_dotenv
-from manifesto_data import extract_pdf_text
+from manifesto.manifesto_data import extract_pdf_text
 load_dotenv()
 
 
@@ -47,4 +47,4 @@ df = pd.DataFrame({
 if __name__ == '__main__':
     import subprocess
     subprocess.run('tokens_to_embedding_bert.py')
-    subprocess.run('plot.py')
+    subprocess.run('visuals/plot.py')

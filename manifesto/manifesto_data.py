@@ -2,12 +2,9 @@ from pdfminer.high_level import extract_text
 import os
 import openai
 import pandas as pd
-import seaborn as sns
-# import matplotlib.pyplot as plt
 from openai_tasks.count_tokens import count_embedding_tokens
 from dotenv import load_dotenv
 import re
-# from nltk.tokenize import sent_tokenize
 import tiktoken
 import spacy
 load_dotenv()
