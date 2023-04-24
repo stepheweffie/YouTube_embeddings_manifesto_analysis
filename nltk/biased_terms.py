@@ -1,7 +1,4 @@
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-import pandas as pd
-
-
 # Load serialized transcript into a pandas DataFrame
 
 # Initialize sentiment analyzer
