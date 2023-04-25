@@ -8,6 +8,7 @@ import re
 import tiktoken
 import spacy
 load_dotenv()
+
 nlp = spacy.load('en_core_web_sm')
 api_key = os.getenv('OPENAI_API_KEY')
 pdf = os.getenv('PDF_FILE_PATH')
@@ -32,17 +33,18 @@ def sentence_df():
         # print(sentences)
         # Clean the sentences by removing special characters and numbers
         re.sub(r'\s+', ' ', pdf_sentences).strip()
+        re.sub(r'\n+', ' ', pdf_sentences).strip()
         doc_sents = [sent.text for sent in sentences.sents]
         df = pd.DataFrame(data=doc_sents, columns=["sentences"])
         # Remove hyperlinks rows
         mask = df['sentences'].str.contains("hyperlinks")
         # Slice the DataFrame to exclude the rows that contain the word "Hyperlink"
         df = df[~mask]
-        print(df["sentences"][100:200])
+        print(len(df))
         return df
 
 
-def map_tokens():
+def map_tokens_df():
     token_map = list()
     text = sentence_df()
     text = text['sentences'].tolist()
@@ -51,28 +53,35 @@ def map_tokens():
     for token_list in tokens:
         print(len(token_list))
         token_map.append(decoder.decode(token_list))
-    token_map = [tokens, token_map]
-    print(len(tokens), len(token_map))
-    return token_map
+    # Build a dataframe
+    df = pd.DataFrame()
+    df['decoded_tokens'] = token_map
+    df['encoded_tokens'] = tokens
+    # token_map = [tokens, token_map]
+    # print(len(tokens), len(token_map))
+    # print(len(df), df[50:100])
+    return df
 
 
 def openai_pdf_embeddings():
     # Maximum tokens for the text-embedding-ada-002 model is 8191 per call
-    text = map_tokens()
-    text = text[1]
+    text = map_tokens_df()
+    text = text['decoded_tokens']
     embeddings = list()
     openai.api_key = api_key
-    for chunk in text:
+    for chunk in text[:-1]:
         embedding = openai.Embedding.create(
             input=chunk, model="text-embedding-ada-002"
         )["data"][0]["embedding"]
-        embeddings += embedding
-    df = pd.DataFrame(data=embeddings, columns=['embeddings'])
+        embeddings.append(embedding)
+        print(len(embedding))
+    # A DataFrame with 1536 columns and 132 rows of embeddings for ['encoded_tokens'] or ['decoded_tokens']
+    df = pd.DataFrame(data=embeddings)
     print(len(df))
     print(df.head())
     return df
 
 
 openai_pdf_embeddings()
-# map_tokens()
+# map_tokens_df()
 # sentence_df()
