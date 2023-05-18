@@ -46,4 +46,4 @@ df = pd.DataFrame({
 if __name__ == '__main__':
     import subprocess
     subprocess.run('tokens_to_embedding_bert.py')
-    subprocess.run('../visuals/embeddings_plot.py')
+    subprocess.run('../manifesto/visuals/embeddings_plot.py')

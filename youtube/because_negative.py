@@ -7,10 +7,17 @@ biased_terms = set()
 has_negative_bias = list()
 
 
-class LoadTranscripts(d6tflow.tasks.TaskPqPandas):
+class UnPickleTranscripts(d6tflow.tasks.TaskPqPandas):
+    def requires(self):
+        # Returns a list of pickles
+        return LoadTranscripts()
+
     def run(self):
-        transcripts = pd.read_csv('transcripts.csv')
-        self.save(transcripts)
+        transcripts = self.input().load()
+        for transcript in transcripts:
+            pd.read_pickle(transcript)
+        df = pd.DataFrame(data=transcripts)
+        self.save(df.to_dict())
 
 # Define a task to extract the biased terms from the transcripts
 
@@ -38,18 +45,7 @@ class ExtractBiasedTerms(d6tflow.tasks.TaskPqPandas):
 
 # Define a function to extract the text after the word 'because' in a given sentence
 
-
-def extract_text_after_because(sentence):
-    doc = nlp(sentence)
-    for token in doc:
-        if token.text.lower() == 'because':
-            text = sentence[token.i+1:]
-            return text
-    return ''
-
 # Define a function to determine whether a sentence contains negative bias towards certain terms
-
-
 def negative_bias(sentence):
     doc = nlp(sentence)
     for token in doc:
@@ -59,16 +55,6 @@ def negative_bias(sentence):
     return False
 
 # Define the workflow
-
-
-class ExtractTextAfterBecause(d6tflow.tasks.TaskPqPandas):
-    def requires(self):
-        return LoadTranscripts()
-
-    def run(self):
-        transcripts = self.input().load()
-        transcripts['text_after_because'] = transcripts['text'].apply(extract_text_after_because)
-        self.save(transcripts)
 
 
 class DetermineNegativeBias(d6tflow.tasks.TaskPqPandas):
@@ -92,3 +78,4 @@ class DetermineNegativeBias(d6tflow.tasks.TaskPqPandas):
                             found_bias = True
                 has_negative_bias.append(found_bias)
         transcripts['has_negative_bias'] = has_negative_bias
+        self.save(transcripts)

@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 import re
 import tiktoken
 import spacy
+from visuals.dimensionality_visuals import pca_kmeans_dimensionality
 load_dotenv()
 
 nlp = spacy.load('en_core_web_sm')
@@ -66,7 +67,8 @@ def map_tokens_df():
 def openai_pdf_embeddings():
     # Maximum tokens for the text-embedding-ada-002 model is 8191 per call
     text = map_tokens_df()
-    text = text['decoded_tokens']
+    # Use encoded tokens
+    text = text['encoded_tokens']
     embeddings = list()
     openai.api_key = api_key
     for chunk in text[:-1]:
@@ -75,13 +77,14 @@ def openai_pdf_embeddings():
         )["data"][0]["embedding"]
         embeddings.append(embedding)
         print(len(embedding))
-    # A DataFrame with 1536 columns and 132 rows of embeddings for ['encoded_tokens'] or ['decoded_tokens']
+    # A DataFrame with 1536 (embeddings) columns and 132 (encodings) rows for ['encoded_tokens']
     df = pd.DataFrame(data=embeddings)
     print(len(df))
     print(df.head())
     return df
 
 
-openai_pdf_embeddings()
+dataframe = openai_pdf_embeddings()
 # map_tokens_df()
 # sentence_df()
+pca_kmeans_dimensionality(dataframe)
