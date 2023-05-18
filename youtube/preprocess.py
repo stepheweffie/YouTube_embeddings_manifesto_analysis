@@ -1,6 +1,6 @@
 import d6tflow
 from d6tflow import Workflow
-from nltk.corpus import stopwords
+# from nltk.corpus import stopwords
 import os
 import pickle
 import pandas as pd
@@ -34,24 +34,31 @@ class LoadDataTask(d6tflow.tasks.TaskPickle):
                     text = ','.join(text_list)
                     new_dict = {"text": text, "label": video_id}
                     data.append(new_dict)
-        print(len(data))
         # Save the data as a dictionary
         data = {'text': [d['text'] for d in data],
                 'label': [d['label'] for d in data]}
         self.save(data)
 
 
+class PicklesToDFTask(d6tflow.tasks.TaskCachePandas):
+    def run(self):
+        output = {}
+        pkl_files = os.listdir(f'{data_dir}/{channel_name}')
+        os.chdir(f'{data_dir}/{channel_name}')
+        for pkl_file in pkl_files:
+            df = pd.read_pickle(pkl_file)
+            df = pd.DataFrame(df)
+            # Perform some operations on the dataframe
+            output[pkl_file] = df
+            # Save the processed dataframe as output
+        self.save(output)
+
+
 def biased_score(word_or_text):
     biases = {}
-    non_biases = {}
     score = sia.polarity_scores(word_or_text)
-    if score['neg'] > 0.5 or score['pos'] > 0.5:
-        biases[word_or_text] = score
-        print(biases)
-        return biases
-    else:
-        non_biases[word_or_text] = score
-        return non_biases
+    biases[word_or_text] = score
+    return biases
 
 
 # Define the d6tflow task for preprocessing the text data
@@ -64,45 +71,39 @@ class PreprocessDataTask(d6tflow.tasks.TaskPqPandas):
     def run(self):
         # Load the text data and labels
         data = self.inputLoad()
-        for doc in data['text']:
-            sentences = []
-            for t in doc:
-                i = doc.index(t)
-                d = data['text'][i]
-                df = pd.DataFrame()
-                # df['video ids'] = labels
-                # Locate a video_id
-                # print(df['video ids'].str.contains(video_id))
-                # df['transcripts'] = d
-                words = []
-                doc_sents = []
-                # Get the biased words and sentences in lists of dicts of strings
-                # for doc in text:
-                biased_sents = {}
-                unbiased_sents = {}
-                # Keras text_to_word_sequence for sentence tokenization
-                sentences.append(text_to_word_sequence(doc, split=".", filters="!,?.\n"))
-                words.append([word_tokenize(doc)])
-                for sentence_list in sentences:
-                    for sentence in sentence_list:
-                        # Call biased_score on each token sentence
-                        biased = biased_score(sentence)
-                        print(d, t, i)
-                        for val in biased.values():
-                            if val['neg'] or val['pos'] >= 0.5:
-                                biased_sents[sentence] = val
-                            else:
-                                unbiased_sents[sentence] = val
-                doc_sents.append([biased_sents, unbiased_sents])
-                # Assuming there are biased words and sentences in every transcript (long form)
-                df['word_tokens'] = words
-                # because = df['word_tokens'].str.contains('because')
-                df['sent_tokens'] = doc_sents
-                print(df)
-                sentences = pd.DataFrame(df['sent_tokens']).transpose()
-                print(sentences)
-                self.save({'video_transcript_data': df,
-                           'biased_sentences_data': sentences})
+        sentences = []
+        text = data['text']
+        labels = data['label']
+        df = pd.DataFrame()
+        df['video ids'] = labels
+        # Locate a video_id
+        # print(df['video ids'].str.contains(video_id))
+        words = []
+        doc_sents = []
+        # Get the biased words and sentences in lists of dicts of strings
+        # for doc in text:
+        biased_sents = {}
+        unbiased_sents = {}
+        # Keras text_to_word_sequence for sentence tokenization
+        sentences.append(text_to_word_sequence(text, split=".", filters="!,?.\n"))
+        words.append([word_tokenize(text)])
+        for sentence_list in sentences:
+            for sentence in sentence_list:
+                # Call biased_score on each token sentence
+                biased = biased_score(sentence)
+                for val in biased.values():
+                    if val['neg'] or val['pos'] >= 0.5:
+                        biased_sents[sentence] = val
+                    else:
+                        unbiased_sents[sentence] = val
+        doc_sents.append([biased_sents, unbiased_sents])
+        # Assuming there are biased words and sentences in every transcript (long form)
+        df['word_tokens'] = words
+        # because = df['word_tokens'].str.contains('because')
+        df['sent_tokens'] = doc_sents
+        sentences = pd.DataFrame(df['sent_tokens']).transpose()
+        self.save({'video_transcript_data': df,
+                   'biased_sentences_data': sentences})
 
 
 # Define a list of stop words and punctuation to remove from the text data
@@ -134,8 +135,13 @@ class ExtractTextBecause(d6tflow.tasks.TaskPqPandas):
         self.save(data)
 
 
-flow = Workflow()
-# data = flow.outputLoad()
-# flow.run(LoadDataTask)
-# flow.run(ExtractTextAfterBecause)
-flow.run(PreprocessDataTask)
+if __name__ == '__main__':
+    flow = Workflow()
+    # flow.run(LoadDataTask)
+    # flow.run(ExtractTextAfterBecause)
+    # flow.run(PreprocessDataTask)
+    flow.run(PicklesToDFTask)
+    data = flow.outputLoad(PicklesToDFTask)
+
+
+
