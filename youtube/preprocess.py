@@ -18,6 +18,44 @@ channel_name = '@JordanBPeterson'
 sia = SentimentIntensityAnalyzer()
 
 
+class PicklesToDFTask(d6tflow.tasks.TaskCachePandas):
+    # Cache the original transcripts in a dict of dataframes
+    def run(self):
+        output = {}
+        pkl_files = os.listdir(f'{data_dir}/{channel_name}')
+        os.chdir(f'{data_dir}/{channel_name}')
+        for pkl_file in pkl_files:
+            df = pd.read_pickle(pkl_file)
+            df = pd.DataFrame(df)
+            # Perform some operations on the dataframe
+            output[pkl_file] = df
+            # print(output[pkl_file])
+            # Save the processed dataframe as output
+        self.save(output)
+
+
+class SearchDfTask(d6tflow.tasks.TaskPickle):
+
+    def requires(self):
+        return PicklesToDFTask()
+
+    def run(self):
+        dataframes = self.inputLoad()
+        search_substring = input('Give a search string: ')
+        # Iterate through the dictionary of dataframes
+        for filename, df in dataframes.items():
+            # Apply the search operation to the 'A' column of each dataframe
+            search_results = df[df['text'].str.contains(search_substring, case=False)]
+            # Print the filename and the rows containing the substring
+            if not search_results.empty:
+                print(f"Results in {filename}:")
+                print(search_results)
+                # If you want to access the whole row as a pandas Series
+                for _, row in search_results.iterrows():
+                    print(row)
+                print('\n')
+
+
 # Define the d6tflow task for loading the text data and labels
 class LoadDataTask(d6tflow.tasks.TaskPickle):
 
@@ -38,20 +76,6 @@ class LoadDataTask(d6tflow.tasks.TaskPickle):
         data = {'text': [d['text'] for d in data],
                 'label': [d['label'] for d in data]}
         self.save(data)
-
-
-class PicklesToDFTask(d6tflow.tasks.TaskCachePandas):
-    def run(self):
-        output = {}
-        pkl_files = os.listdir(f'{data_dir}/{channel_name}')
-        os.chdir(f'{data_dir}/{channel_name}')
-        for pkl_file in pkl_files:
-            df = pd.read_pickle(pkl_file)
-            df = pd.DataFrame(df)
-            # Perform some operations on the dataframe
-            output[pkl_file] = df
-            # Save the processed dataframe as output
-        self.save(output)
 
 
 def biased_score(word_or_text):
@@ -110,38 +134,14 @@ class PreprocessDataTask(d6tflow.tasks.TaskPqPandas):
 # stop_words = stopwords.words('english') + list(string.punctuation)
 
 
-class ExtractTextBecause(d6tflow.tasks.TaskPqPandas):
-    def requires(self):
-        return PreprocessDataTask()
-
-    def run(self):
-        data = self.inputLoad(as_dict=True)['biased_sentences_data']
-        because_bias = []
-        for row in data:
-            because = []
-            # because_str = data.str.contains('because')
-            for sent_list in row:
-                for sent_dict in sent_list:
-                    sent = 'because'
-                    for sents in sent_dict.keys():
-                        if sent in sents:
-                            because.append(sent)
-                        else:
-                            because.append(' ')
-            because_bias.append(because)
-        output = pd.DataFrame()
-        output['because_bias'] = because_bias
-        data = output.to_dict()
-        self.save(data)
-
-
 if __name__ == '__main__':
     flow = Workflow()
     # flow.run(LoadDataTask)
     # flow.run(ExtractTextAfterBecause)
     # flow.run(PreprocessDataTask)
-    flow.run(PicklesToDFTask)
-    data = flow.outputLoad(PicklesToDFTask)
+    flow.run(SearchDfTask)
+    # flow.run(PicklesToDFTask)
+    # data = flow.outputLoad(PicklesToDFTask)
 
 
 
