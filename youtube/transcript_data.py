@@ -26,12 +26,12 @@ def format_to_json(transcript):
 class DownloadTranscriptTask(d6tflow.tasks.TaskPickle):
     video_id = ''
     language_code = 'en'
-    if len(video) == 0:
+    if video[0] == 0:
         video_id = stored_video
 
     def output(self):
         if self.video_id == stored_video:
-            return d6tflow.targets.PickleTarget('single_video_data.pkl')
+            return d6tflow.targets.PickleTarget('../manifesto/single_video_transcript.pkl')
         else:
             return d6tflow.targets.PickleTarget('more_videos_data.pkl')
 
@@ -74,4 +74,5 @@ def handle_pickle():
 
 
 if __name__ == "__main__":
-    LoadDataTask().run()
+    flow = d6tflow.Workflow()
+    flow.run(DownloadTranscriptTask)

@@ -1,16 +1,22 @@
+import glob
 import d6tflow
 from d6tflow import Workflow
-# from nltk.corpus import stopwords
 import os
 import pickle
 import pandas as pd
 import spacy
 from keras.preprocessing.text import text_to_word_sequence
+import nltk.data
 from nltk.tokenize import word_tokenize
 from nltk.sentiment import SentimentIntensityAnalyzer
-
+from gensim import corpora
+from nltk.corpus import stopwords
+from nltk.stem.wordnet import WordNetLemmatizer
+# If you haven't downloaded these NLTK resources yet, you will need to do so
+from nltk import sent_tokenize
+stop_words = set(stopwords.words('english'))
+lemmatizer = WordNetLemmatizer()
 nlp = spacy.load('en_core_web_sm')
-
 # Load the dataset of your personal writing to train a model to write in your style
 data_dir = "data"
 files = os.listdir(data_dir)
@@ -18,20 +24,61 @@ channel_name = '@JordanBPeterson'
 sia = SentimentIntensityAnalyzer()
 
 
+def biased_score(word_or_text):
+    biases = {}
+    score = sia.polarity_scores(word_or_text)
+    biases[word_or_text] = score
+    return biases
+
+
 class PicklesToDFTask(d6tflow.tasks.TaskCachePandas):
     # Cache the original transcripts in a dict of dataframes
     def run(self):
         output = {}
-        pkl_files = os.listdir(f'{data_dir}/{channel_name}')
-        os.chdir(f'{data_dir}/{channel_name}')
+        pkl_files = glob.glob(f'{data_dir}/{channel_name}/*.pkl')
         for pkl_file in pkl_files:
-            df = pd.read_pickle(pkl_file)
-            df = pd.DataFrame(df)
-            # Perform some operations on the dataframe
-            output[pkl_file] = df
-            # print(output[pkl_file])
-            # Save the processed dataframe as output
+            try:
+                df = pd.read_pickle(pkl_file)
+                df = pd.DataFrame(df)
+                # Perform some operations on the dataframe
+                output[pkl_file] = df
+                # Save the processed dataframe as output
+            except FileNotFoundError:
+                continue
         self.save(output)
+
+
+class TrainingPreprocessTask(d6tflow.tasks.TaskCachePandas):
+    # Cache the original transcripts in a dict of dataframes
+    def run(self):
+        texts = list()
+        tokens = list()
+        text_tokens = list()
+        pkl_files = glob.glob(f'{data_dir}/playlist/*.pkl')
+        for pkl_file in pkl_files:
+            try:
+                data = nltk.data.load(pkl_file, format='pickle')
+                # Perform some operations on the dataframe
+                for text in data:
+                    text_tokens.append(tokens)
+                    if len(text['text']) > 1:
+                        # sents.append(sent_tokenize(text['text']))
+                        texts.append(text['text'])
+                        # Tokenize, remove stop words, and lemmatize the text
+                        for word in nltk.word_tokenize(text['text']):  # Tokenize and lowercase
+                            if word.isalpha() and word not in stop_words:
+                                lem = lemmatizer.lemmatize(word)
+                                tokens.append(lem)# Lemmatize word
+                text_tokens.append(tokens)
+            except FileNotFoundError:
+                continue
+            except KeyError:
+                print("KeyError occurred, Check Luigi For Status")
+        texts = pd.DataFrame(texts)
+        text_tokens = pd.DataFrame(text_tokens)
+        texts = {'texts': texts, 'tokens': text_tokens}
+        print(texts)
+        self.save(texts)
 
 
 class SearchDfTask(d6tflow.tasks.TaskPickle):
@@ -41,7 +88,9 @@ class SearchDfTask(d6tflow.tasks.TaskPickle):
 
     def run(self):
         dataframes = self.inputLoad()
+        results = {}
         search_substring = input('Give a search string: ')
+        output_dir = "search_" + search_substring
         # Iterate through the dictionary of dataframes
         for filename, df in dataframes.items():
             # Apply the search operation to the 'A' column of each dataframe
@@ -49,11 +98,15 @@ class SearchDfTask(d6tflow.tasks.TaskPickle):
             # Print the filename and the rows containing the substring
             if not search_results.empty:
                 print(f"Results in {filename}:")
+                results[f'{filename}'] = search_results
                 print(search_results)
                 # If you want to access the whole row as a pandas Series
                 for _, row in search_results.iterrows():
                     print(row)
                 print('\n')
+        os.mkdir(output_dir)
+        os.chdir(output_dir)
+        self.save(results)
 
 
 # Define the d6tflow task for loading the text data and labels
@@ -61,7 +114,6 @@ class LoadDataTask(d6tflow.tasks.TaskPickle):
 
     def run(self):
         # Define a list of text data and corresponding labels
-        print(channel_name, data_dir)
         data = []
         transcripts = os.listdir(f'{data_dir}/{channel_name}')
         for video_id in transcripts:
@@ -78,15 +130,8 @@ class LoadDataTask(d6tflow.tasks.TaskPickle):
         self.save(data)
 
 
-def biased_score(word_or_text):
-    biases = {}
-    score = sia.polarity_scores(word_or_text)
-    biases[word_or_text] = score
-    return biases
-
-
 # Define the d6tflow task for preprocessing the text data
-class PreprocessDataTask(d6tflow.tasks.TaskPqPandas):
+class BiasedSentencesTask(d6tflow.tasks.TaskPqPandas):
     persist = ['video_transcript_data', 'biased_sentences_data']
 
     def requires(self):
@@ -100,12 +145,9 @@ class PreprocessDataTask(d6tflow.tasks.TaskPqPandas):
         labels = data['label']
         df = pd.DataFrame()
         df['video ids'] = labels
-        # Locate a video_id
-        # print(df['video ids'].str.contains(video_id))
         words = []
         doc_sents = []
         # Get the biased words and sentences in lists of dicts of strings
-        # for doc in text:
         biased_sents = {}
         unbiased_sents = {}
         # Keras text_to_word_sequence for sentence tokenization
@@ -139,9 +181,8 @@ if __name__ == '__main__':
     # flow.run(LoadDataTask)
     # flow.run(ExtractTextAfterBecause)
     # flow.run(PreprocessDataTask)
-    flow.run(SearchDfTask)
+    flow.run(TrainingPreprocessTask)
     # flow.run(PicklesToDFTask)
-    # data = flow.outputLoad(PicklesToDFTask)
-
-
+    data = flow.outputLoad(TrainingPreprocessTask)
+    print(data['text'])
 

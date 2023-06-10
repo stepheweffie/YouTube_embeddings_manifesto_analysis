@@ -1,4 +1,3 @@
-import pandas as pd
 import d6tflow
 from main import nlp
 # Load serialized transcripts into a pandas DataFrame
@@ -6,18 +5,6 @@ from main import nlp
 biased_terms = set()
 has_negative_bias = list()
 
-
-class UnPickleTranscripts(d6tflow.tasks.TaskPqPandas):
-    def requires(self):
-        # Returns a list of pickles
-        return LoadTranscripts()
-
-    def run(self):
-        transcripts = self.input().load()
-        for transcript in transcripts:
-            pd.read_pickle(transcript)
-        df = pd.DataFrame(data=transcripts)
-        self.save(df.to_dict())
 
 # Define a task to extract the biased terms from the transcripts
 

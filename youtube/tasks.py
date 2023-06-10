@@ -1,164 +1,133 @@
-import numpy as np
 import pandas as pd
 import os
 from nltk.sentiment import SentimentIntensityAnalyzer
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.semi_supervised import LabelSpreading
+import d6tflow
+from d6tflow import Workflow
+from preprocess import TrainingPreprocessTask
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
 import tensorflow as tf
-from keras.layers import Input, Embedding, LSTM, Dense, concatenate
-from keras.models import Model
 from keras.preprocessing.text import Tokenizer
 from keras.utils import pad_sequences
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import LabelEncoder
+import nltk.data
+from nltk.corpus import stopwords
+from nltk.stem.wordnet import WordNetLemmatizer
+# If you haven't downloaded these NLTK resources yet, you will need to do so
+# nltk.download('vader_lexicon')  # for sentiment analysis
+stop_words = set(stopwords.words('english'))
+lemmatizer = WordNetLemmatizer()
 
 sia = SentimentIntensityAnalyzer()
-# Load the dataset of your personal writing to train a model to write in your style
 data_dir = "data"
 files = os.listdir(data_dir)
 channel_name = '@JordanBPeterson'
-print(channel_name)
 
-# LoadDataTask
-# PreprocessDataTask
+# Load the dataset of your personal writing to train a model to write in your style
 
-# BiasedTextTask
-# GenerateBiasedTextTask
+class TrainingTask(d6tflow.tasks.TaskPqPandas)
+    def requires(self):
+        return TrainingPreprocessTask()
 
-# Train a language generation model on the biased text
+    def run(self):
+        self.save(output)
 
-# pad the padded sequences with zeros to reach the corpus length of 561
-padded_sequences = pad_sequences(padded_sequences, maxlen=561, padding='post', truncating='post')
+class BinaryTrainingTask(d6tflow.tasks.TaskPqPandas):  # TaskPqPandas is a task that loads/saves dataframes in parquet format
+    def requires(self):
+        return TrainingTask()
 
-# Define the sequence model
-sequence_input = Input(shape=(maxlen,))
-embedded_sequences = Embedding(12, 8)(sequence_input)
-lstm = LSTM(32)(embedded_sequences)
+    def run(self):
+        # Load your data
+        data_dict = self.inputLoad()
+        vectorizer = TfidfVectorizer(stop_words='english')
+        for key in data_dict:
+            df = data_dict[key]
+            print(key)
+            # First 10 rows from each dataframe are from 'main speaker' (labeled as 0)
+            # Rest are uncertain (labeled as -1)
+            df['label'] = [-1 for _ in range(len(df))]  # Initialize all as -1 (uncertain)
+            df.iloc[:20, df.columns.get_loc('label')] = 0  # First 10 rows are 'main speaker'
+            # Convert the text to a matrix of TF-IDF features
+            X = vectorizer.fit_transform(df['text'])
+            # Convert sparse matrix to dense matrix
+            X = X.toarray()
+            # Run K-means clustering to identify groups
+            kmeans = KMeans(n_clusters=2)  # Choose the appropriate number of clusters
+            kmeans.fit(X)
+            # Now each document in your corpus has a cluster label, which is stored in kmeans.labels_
+            df['cluster_label'] = kmeans.labels_
+            # If you want to see the terms that are most indicative of each cluster, you could do something like this:
+            print("Top terms per cluster:")
+            order_centroids = kmeans.cluster_centers_.argsort()[:, ::-1]
+            terms = vectorizer.get_feature_names_out()
+            for i in range(2):  # Again, replace 5 with your chosen number of clusters
+                print("Cluster %d:" % i)
+                for ind in order_centroids[i, :10]:  # Replace 10 with the number of terms you want to print out
+                    print(' %s' % terms[ind])
+                print(silhouette_score(X, kmeans.labels_))
+            print(X.shape)
+            # Convert labels
+            y = df['label']
+            # Use LabelSpreading to propagate the labels from the labeled instances to the unlabeled ones
+            label_propagation_model = LabelSpreading(kernel='knn', alpha=0.8)
+            try:
+                label_propagation_model.fit(X, y)
+                print(label_propagation_model.score(X, y))
+                # Predict labels for the unlabeled data
+            except ValueError:
+                print('ValueError')
+                continue
+            predicted_labels = label_propagation_model.transduction_
+            # Replace the uncertain labels in your dataframe with the predicted labels
+            df['label'] = predicted_labels
+        # Combine all dataframes into one
+        data = pd.concat(data_dict.values())
+        # Save the dataframe
+        self.save(data)
 
-# Bag-of-words
-vectorizer = CountVectorizer()
-text = text['text']
-X = vectorizer.fit_transform(text)
-print(type(X[0]), type(X[1]))
 
-# Define the input and output shapes for the Keras model
-input_shape = X.shape[1]
-output_shape = len(tokenizer.word_index) + 1
+class BinaryClassifierTask(d6tflow.tasks.TaskPickle):  # Assuming you have a defined Task
+    def requires(self):
+        return TrainingTask()
 
-# Assuming `labels` is a list of strings
-le = LabelEncoder()
-encoded_labels = le.fit_transform(labels)
-encoded_labels.astype(np.float32)
-# Determine the number of classes
-num_classes = len(le.classes_)
+    def run(self):
+        data = self.inputLoad()  # Load your data
 
-# Create an empty array for y
-y = np.zeros((X.shape[0], num_classes)).astype(np.float32)
+        # Tokenization
+        tokenizer = Tokenizer(num_words=10000, oov_token="<OOV>")
+        tokenizer.fit_on_texts(data['text'])
+        sequences = tokenizer.texts_to_sequences(data['text'])
 
-# Fill in the correct label for each sample in y
-for i in range(X.shape[0]):
-    # Get the label for this sample
-    label = encoded_labels[i]
-    # Set the corresponding value in y to 1
-    y[i, label] = 1
+        # Padding
+        padded = pad_sequences(sequences, padding='post')
 
-# Define the bag-of-words model
-bow_input = Input(shape=(X.shape[0],))
-dense = Dense(32)(bow_input)
+        # Splitting the data into training and testing
+        train_size = int(0.8 * len(padded))  # Adjust as needed
+        train_sequences = padded[:train_size]
+        train_labels = data['cluster_label'][:train_size]
+        test_sequences = padded[train_size:]
+        test_labels = data['cluster_label'][train_size:]
 
-# Concatenate the two models
-merged = concatenate([lstm, dense])
-output = Dense(output_shape, activation='sigmoid')(merged)
+        # Define the model
+        model = tf.keras.Sequential([
+            tf.keras.layers.Embedding(10000, 64, input_length=train_sequences.shape[1]),
+            tf.keras.layers.Bidirectional(tf.keras.layers.LSTM(64)),
+            tf.keras.layers.Dense(64, activation='relu'),
+            tf.keras.layers.Dense(1, activation='sigmoid')
+        ])
 
-# Define the combined model
-model = Model(inputs=[sequence_input, bow_input], outputs=output)
-model.compile(loss='categorical_crossentropy', optimizer='adam')
+        # Compile the model
+        model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-# Split the data into training and validation sets
-X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+        # Train the model
+        history = model.fit(train_sequences, train_labels, epochs=10, validation_data=(test_sequences, test_labels))
 
-# Train the Keras model on the tokenized and sequenced data
-y_train = tf.keras.utils.to_categorical(y_train, num_classes=num_classes)
+        # Save the model
+        self.save(history.model)
 
-# Create a sparse tensor from the bag-of-words representation
-indices = tf.cast(tf.transpose([X.nonzero()[0], X.nonzero()[1]]), tf.int64)
-values = tf.cast(X.data, tf.float32)
-shape = tf.cast(X.shape, tf.int64)
 
-# Check types of NumPy arrays
-sparse_tensor = tf.sparse.SparseTensor(indices=indices, values=values, dense_shape=shape)
-
-# Reorder the indices of the sparse tensor
-sparse_tensor_reordered = tf.sparse.reorder(sparse_tensor)
-
-# Convert the sparse tensor to a dense tensor
-dense_tensor = tf.sparse.to_dense(sparse_tensor_reordered)
-
-# Convert the input data to NumPy arrays
-padded_sequences = np.array(padded_sequences)
-padded_sequences = np.vstack([np.zeros((209, 561)).astype(np.float32), padded_sequences]).astype(np.float32)
-# print(padded_sequences)
-# Transform sentiment
-sentiment = df
-sentiment = sentiment.iloc[:561, :]
-sentiment = sentiment.to_numpy()
-# Fit the dense_tensor to the number of documents
-dense_tensor = np.asarray(dense_tensor).astype(np.float32)
-
-Y = y
-
-[print(i.shape, i.dtype) for i in model.inputs]
-[print(o.shape, o.dtype) for o in model.outputs]
-[print(l.name, l.input_shape, l.dtype) for l in model.layers]
-
-# define batch size
-batch_size = 32
-X = np.concatenate(padded_sequences).astype(np.float32)
-# Compile and fit the model
-model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-# call model.fit()
-model.fit(x=[padded_sequences.astype(np.float32), dense_tensor.astype(np.float32)], y=Y.astype(np.float32),
-          batch_size=batch_size)
-
-topic = "feminism"
-topic_vector = vectorizer.transform([topic]).toarray()
-seed_text = "Tell me something that is happening because of feminism"
-for i in range(20):
-    encoded_seed = tokenizer.texts_to_sequences([seed_text])[0]
-    encoded_seed = pad_sequences([encoded_seed], maxlen=1, padding='pre')
-    predicted_word = model.predict([topic_vector], verbose=0)
-    for word, index in tokenizer.word_index.items():
-        if index == np.argmax(predicted_word):
-            seed_text += " " + word
-            break
-
-        '''
-        maxlen = max([len(seq) for seq in biased_sequences])
-        padded_sequences = pad_sequences(sequences, maxlen=maxlen, padding='post')
-        vocab_size = len(tokenizer.word_index) + 1
-        # Vectorize text and render vocabulary 
-        vectorizer = CountVectorizer()
-        vectorizer.fit(text)
-        X = vectorizer.fit_transform(text)
-        print(X, vectorizer.vocabulary)
-
-        # Encode the labels using a LabelEncoder object
-        label_encoder = LabelEncoder()
-        y = label_encoder.fit_transform(labels)
-
-        sequences = np.array(sequences)
-        X_train, y_train = sequences[:, :-1], sequences[:, -1]
-
-        # Split the data into training and validation sets
-        X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
-
-        # Save the preprocessed data
-        preprocessed_data = {'X_train': X_train,
-                             'X_val': X_val,
-                             'y_train': y_train,
-                             'y_val': y_val,
-                             'vectorizer': vectorizer,
-                             'label_encoder': label_encoder,
-                             'sequences': padded_sequences,
-                             'vocab_size': vocab_size}
-        self.save(preprocessed_data)
-'''
+flow = Workflow()
+flow.run(TrainingTask)
+# output = flow.outputLoad(DataTask)
+# print(output.head())

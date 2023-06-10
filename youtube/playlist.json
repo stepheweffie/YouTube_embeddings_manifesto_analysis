@@ -1,0 +1,1962 @@
+{
+    "kind": "youtube#playlistItemListResponse",
+    "etag": "XAVV3ZmOcab6XfaTI0L7V9LaG9g",
+    "items": [
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "GalIxTK5HHJCZplWjE7_nVpyvis",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC41NkI0NEY2RDEwNTU3Q0M2",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:05:26Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning Lecture 01a: Introduction (Part 1)",
+                "description": "Maps of Meaning is a university course taught by Dr. Jordan B Peterson. It describes how the world is portrayed in story form in myths, rituals and religious conceptualizations and how that is related to brain function and behavior. In doing so, it presents a solid alternative to nihilism and totalitarianism. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/4tQOlQRp3gQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/4tQOlQRp3gQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/4tQOlQRp3gQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/4tQOlQRp3gQ/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 0,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "4tQOlQRp3gQ"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "1wNJhC0AlmrH_yFdkqildINnO9g",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4yODlGNEE0NkRGMEEzMEQy",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:05:43Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning Lecture 1: Introduction (Part 2)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nJanuary 7, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/rM8JsibkrI8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/rM8JsibkrI8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/rM8JsibkrI8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/rM8JsibkrI8/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 1,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "rM8JsibkrI8"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "KAXEs-evPyLBiDVu4yByaUXw0AY",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4wMTcyMDhGQUE4NTIzM0Y5",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:05:58Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning Lecture 02a: Object and Meaning (Part 1)",
+                "description": "Maps of Meaning is a course based on the book Maps of Meaning: The Architecture of Belief. This lecture describes the perception of meaning as something prior to and distinct from the perception of objects. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/mO9LUWs5M60/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/mO9LUWs5M60/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/mO9LUWs5M60/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/mO9LUWs5M60/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 2,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "mO9LUWs5M60"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "_vitz9qwWMWevdzEyzl5EQddzeQ",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC41MjE1MkI0OTQ2QzJGNzNG",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:06:30Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning Lecture 02b: Object and Meaning (Part 2)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nJanuary 14, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/6Rd10PQVsGs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/6Rd10PQVsGs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/6Rd10PQVsGs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/6Rd10PQVsGs/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 3,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "6Rd10PQVsGs"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "7V3fCn6oxOMf_wF46ZChFHdcyRU",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4wOTA3OTZBNzVEMTUzOTMy",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:06:41Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning Lecture 03a: Narrative, Neuropsychology & Mythology I (Part 1)",
+                "description": "It can be argued that the brain has two modes of operation: one for explored territory, and the other for unexplored territory. It is representations of those twin territories that makes up a major part of the foundation for narrative and mythology. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/6NVY5KdSfQI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/6NVY5KdSfQI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/6NVY5KdSfQI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/6NVY5KdSfQI/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 4,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "6NVY5KdSfQI"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "bLC0ootmBYKZon6NWHv2wNzUfcM",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4xMkVGQjNCMUM1N0RFNEUx",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:07:04Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning Lecture 03b: Narrative, Neuropsychology & Mythology I (Part 2)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nJanuary 21, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/3nAIAPYuD7c/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/3nAIAPYuD7c/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/3nAIAPYuD7c/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/3nAIAPYuD7c/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 5,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "3nAIAPYuD7c"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "hTAv80_E5UOFQIFc78ouMwUoY60",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC41MzJCQjBCNDIyRkJDN0VD",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:07:16Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 04a: Narrative, Neuropsychology & Mythology II / Part 1 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nJanuary 28, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/rlGqUfIgJfc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/rlGqUfIgJfc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/rlGqUfIgJfc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/rlGqUfIgJfc/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 6,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "rlGqUfIgJfc"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "iLZ65OgYYuVRG2N8QO4IGadez00",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5DQUNERDQ2NkIzRUQxNTY1",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:07:27Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 04b: Narrative, Neuropsychology & Mythology II / Part 2 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nJanuary 28, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/YCc-Rk1GPpQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/YCc-Rk1GPpQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/YCc-Rk1GPpQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/YCc-Rk1GPpQ/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 7,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "YCc-Rk1GPpQ"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "VCOT4uRqNmwgV1RpcUQdbYasdd4",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC45NDk1REZENzhEMzU5MDQz",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:07:38Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 05b: Narrative, Neuropsychology & Mythology III / Part 1 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nFebruary 4, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Ov5pYNPi358/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Ov5pYNPi358/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Ov5pYNPi358/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/Ov5pYNPi358/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 8,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "Ov5pYNPi358"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "ckVRy2ZZwyw8CHjIIaFvv87UF7E",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5GNjNDRDREMDQxOThCMDQ2",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:07:51Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 05b: Mythology: Enuma Elish / Part 2 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nFebruary 4, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/VJVMtUb-LEY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/VJVMtUb-LEY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/VJVMtUb-LEY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/VJVMtUb-LEY/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 9,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "VJVMtUb-LEY"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "YChIMsDt9bL2n7xSWNVwhuAoA1w",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC40NzZCMERDMjVEN0RFRThB",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:08:03Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 06a: Mythology: Introduction / Part 1 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nFebruary 11, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/r_ShAseOvNE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/r_ShAseOvNE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/r_ShAseOvNE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/r_ShAseOvNE/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 10,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "r_ShAseOvNE"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "djdZd8W7C8_SMrRL5kkrpbmz5BY",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5EMEEwRUY5M0RDRTU3NDJC",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:08:15Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 06b: Mythology: Egyptian Myths / Part 2 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nFebruary 11, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/aI-pET9YD6A/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/aI-pET9YD6A/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/aI-pET9YD6A/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/aI-pET9YD6A/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 11,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "aI-pET9YD6A"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "sfBSkFzykOnic67Ef3rvuMbld3k",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC45ODRDNTg0QjA4NkFBNkQy",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:08:29Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 07a: Mythology: Chaos / Part 1 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nFebruary 25, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/44dcUoh0oT4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/44dcUoh0oT4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/44dcUoh0oT4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/44dcUoh0oT4/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 12,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "44dcUoh0oT4"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "DFnqK2T4XLDPtrEzgRV-jKF8Z8k",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4zMDg5MkQ5MEVDMEM1NTg2",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:08:49Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 07b: Mythology: Chaos / Part 2 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nFebruary 25, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/rnw4SXX7cGY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/rnw4SXX7cGY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/rnw4SXX7cGY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 13,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "rnw4SXX7cGY"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "9tBu6oD2zNqnH5imb_84MfmgaV0",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC41Mzk2QTAxMTkzNDk4MDhF",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:09:04Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 08a: Mythology: The Great Mother / Part 1 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nMarch 4, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/NOzjfqO6-K8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/NOzjfqO6-K8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/NOzjfqO6-K8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/NOzjfqO6-K8/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/NOzjfqO6-K8/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 14,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "NOzjfqO6-K8"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "aT4atffDPfzeG9ufAsnkb_tBr2s",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5EQUE1NTFDRjcwMDg0NEMz",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:09:16Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 08b: Mythology: The Great Mother / Part 2 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nMarch 4, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/w1scgquS2mo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/w1scgquS2mo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/w1scgquS2mo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/w1scgquS2mo/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/w1scgquS2mo/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 15,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "w1scgquS2mo"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "w0SW3eG0UIBNhhRODt-HY4xhRiI",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC41QTY1Q0UxMTVCODczNThE",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:09:45Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 09a: Mythology: The Great Father / Part 1 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nMarch 11, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/134BCxbMUlU/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/134BCxbMUlU/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/134BCxbMUlU/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/134BCxbMUlU/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 16,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "134BCxbMUlU"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "znTnb2WeH-nRGcxoJtnXJyImiEU",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4yMUQyQTQzMjRDNzMyQTMy",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:10:01Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 09b: Mythology: The Great Father / Part 2 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nMarch 11, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/tIZb0YEcyNo/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/tIZb0YEcyNo/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/tIZb0YEcyNo/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/tIZb0YEcyNo/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 17,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "tIZb0YEcyNo"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "ww0l96BSQ4-I7HNZH0AoPBfssnY",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC45RTgxNDRBMzUwRjQ0MDhC",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:10:17Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 10: Culture & Anomaly / Part 1 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nMarch 18, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Bj6HgQBNiZE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Bj6HgQBNiZE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Bj6HgQBNiZE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/Bj6HgQBNiZE/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 18,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "Bj6HgQBNiZE"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "O7WOEDitfcow_OruE6ZaTGMdAhg",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5ENDU4Q0M4RDExNzM1Mjcy",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:10:38Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 10: Genesis I / Part 2 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nMarch 18, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/sJVtAIIHxu0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/sJVtAIIHxu0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/sJVtAIIHxu0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/sJVtAIIHxu0/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 19,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "sJVtAIIHxu0"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "ALTkZOXY_2AO0XJbSaKNwuIzgXo",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4yMDhBMkNBNjRDMjQxQTg1",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:10:51Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 11: Genesis II / Part 1 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nApril 1, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Q_2UYIuvDXI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Q_2UYIuvDXI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Q_2UYIuvDXI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/Q_2UYIuvDXI/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 20,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "Q_2UYIuvDXI"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "1Ht6SSHjjKjEKIzalABoeqO-W8w",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5GM0Q3M0MzMzY5NTJFNTdE",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:11:43Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2015 Maps of Meaning 11: Conclusion - The Hero / Part 2 (Jordan Peterson)",
+                "description": "University of Toronto PSY434\nCourse Information: http://jordanbpeterson.com/Psy434H/\nPlaylist: https://www.youtube.com/playlist?list=PL22J3VaeABQByVcW4lXQ46glULC-ekhOp\nApril 1, 2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/G7U9el_yVhI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/G7U9el_yVhI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/G7U9el_yVhI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/G7U9el_yVhI/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 21,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "G7U9el_yVhI"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "ti0nKYgCUMkQdzuroK7pemLvJI8",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4zRjM0MkVCRTg0MkYyQTM0",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:12:55Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 01 Maps of Meaning: Introduction and Overview",
+                "description": "Maps of Meaning is a lecture series from the University of Toronto Department of Psychology by Professor Jordan B Peterson. This is the first lecture in the 2016 series. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/bjnvtRgpg6g/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/bjnvtRgpg6g/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/bjnvtRgpg6g/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 22,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "bjnvtRgpg6g"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "QAI8TrseRCx3rtMd6fm7SoHf-IM",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC45NzUwQkI1M0UxNThBMkU0",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:13:06Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 02 Maps of Meaning: Playable and non-playable games",
+                "description": "People need information about how to act, as well as information about what the world is made of. These two forms of information are neither delivered nor created in the same manner. Information about how to act is moral information. It is useful to use the idea of \"game\" to understand the structure of moral information. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/RcmWssTLFv0/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/RcmWssTLFv0/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/RcmWssTLFv0/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/RcmWssTLFv0/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 23,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "RcmWssTLFv0"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "lzeuCSGuxOwtR2cmHI9E-f7ubkM",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC43MTI1NDIwOTMwQjIxMzNG",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:13:27Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 03 Maps of Meaning: Part I: The basic story and its transformations",
+                "description": "We inhabit a story, with a particular structure. That story contains a representation of the desired future, compared to the interpreted present. It exists at different levels of resolution, from low-res abstract ideals, down to the conscious microbehaviors that make up our actual interaction with the world. A story tells about a journey from point a to point b. A revolutionary story, a meta-story, describes how one story was transformed by anomaly and crisis into another.\n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/ux6TVYqdN-E/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/ux6TVYqdN-E/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/ux6TVYqdN-E/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/ux6TVYqdN-E/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 24,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "ux6TVYqdN-E"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "-C8xjFHxHui834HP9Mk5KlCb4Zk",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5DNzE1RjZEMUZCMjA0RDBB",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:13:17Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 03 Maps of Meaning: Part II: The basic story -- and its transformations",
+                "description": "We view the world through a hierarchical, motivational lens. It provides us with a starting place and aim. At its highest level of resolution, it is composed of voluntary behaviors. At its lowest and most abstract, it is an ultimate value. When we talk about our lenses, we are telling stories -- or, sometimes, meta-stories, when we talk about how our stories collapse or change. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/DmpUQEDRIKA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/DmpUQEDRIKA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/DmpUQEDRIKA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/DmpUQEDRIKA/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 25,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "DmpUQEDRIKA"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "SeoEgm6m6CXVxgKrh-QG2J8QDVg",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5DQ0MyQ0Y4Mzg0M0VGOEYw",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:15:02Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 04 Maps of Meaning: Anomaly",
+                "description": "Much of the complexity of the world is hidden from us while we pursue our focal, goal-directed actions. However, when our plans go wrong, and we don't get what we want, what we have ignored resurfaces. If the disruption is severe enough, major parts of our identity have to be reconfigured. This can be difficult to the point of trauma. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/DjYqkPrCvXQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/DjYqkPrCvXQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/DjYqkPrCvXQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/DjYqkPrCvXQ/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 26,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "DjYqkPrCvXQ"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "OWdkrR-9xJkAEeQ6t6J7FJCc8wY",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4yQUE2Q0JEMTk4NTM3RTZC",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:15:18Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 05: Maps of Meaning: Part I: Anomaly and the brain",
+                "description": "We have limited knowledge. In consequence, many things are unknown and unpredictable. However, we must still act when we don't know what to do. Much of the human brain is therefore devoted towards processing novelty or anomaly, which emerge when the plans we make to fulfill our desires go wrong. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/ZHmklvx9oJ4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/ZHmklvx9oJ4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/ZHmklvx9oJ4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 27,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "ZHmklvx9oJ4"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "q-TYOgqX2g_wLOtsLH7ezF4P3yY",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5DMkU4NTY1QUFGQTYwMDE3",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:15:49Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 05 Maps of Meaning: Part II: The brain, continued",
+                "description": "Our brains -- and our minds -- are organized to work in a world that is essentially narrative, rather than objective. If \"the environment\" is, by definition, what we have adapted to, then this raises some serious questions about reality. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/cFS6fPLQ024/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/cFS6fPLQ024/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/cFS6fPLQ024/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/cFS6fPLQ024/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 28,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "cFS6fPLQ024"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "1oNRs8vzcfqy60XN3pONziXlRrE",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC44Mjc5REFBRUE2MTdFRDU0",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:16:49Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 06 Maps of Meaning: Part I: The primordial narrative",
+                "description": "Our experience takes narrative form, under the influence of biological, cultural and uniquely individual forces. This is partly because our minds are based in social cognition. Experience manifests itself comprehensibly as the unknown itself, the great dragon of chaos; the unknown as we experience it, the great mother; culture, the great father, and the individual, the center of conscious being, Each of these categories manifests itself in action. Each has a positive and negative element. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/mJI0hVV-5Vs/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/mJI0hVV-5Vs/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/mJI0hVV-5Vs/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/mJI0hVV-5Vs/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 29,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "mJI0hVV-5Vs"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "ApuZlozWYrRL3ZuHLe-7BrnHb3Q",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC43NDhFRTgwOTRERTU4Rjg3",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:19:16Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 06 Maps of Meaning: Part II: The Primordial Narrative continued",
+                "description": "--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/5Q_GIHDpuZw/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/5Q_GIHDpuZw/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/5Q_GIHDpuZw/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 30,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "5Q_GIHDpuZw"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "dkBF9oRLyimGjW7oP0XjBDPGiXU",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC41QUZGQTY5OTE4QTREQUU4",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:19:47Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 09 Maps of Meaning: Genesis",
+                "description": "The stories of Adam and Eve and Cain and Abel that open Genesis are very ancient. The first sets the stage for history, describing the emergence of man and woman into self-conscious awareness. The second describes the urge to murder, and then genocide, as a consequence of that awakening. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Gacjj2aCo7Q/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Gacjj2aCo7Q/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Gacjj2aCo7Q/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/Gacjj2aCo7Q/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 31,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "Gacjj2aCo7Q"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "1NwX4ksjiFewNxv2TFZf4B5qXlc",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4zRDBDOEZDOUM0MDY5NEEz",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:20:00Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 10 Maps of Meaning: Gautama Buddha, Adam and Eve",
+                "description": "The story of the Buddha shares much of its structure with the creation myth featuring Adam and Eve in the Book of Genesis. The commonalities include the idea of a paradisal, enclosed space; the disruption of that space by anomalies associated with mortality; and, in the final analysis, the idea of enlightenment or identification with the divine as medication for tragic self-consciousness. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/F7T5cg1a77A/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/F7T5cg1a77A/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/F7T5cg1a77A/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 32,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "F7T5cg1a77A"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "qBWDtIYxNJ3e9ktlDiefEa4yDeY",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5CMEQ2Mjk5NTc3NDZFRUNB",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:20:19Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2016 Lecture 14 Maps of Meaning: Final",
+                "description": "University of Toronto PSY\nCourse Information: http://jordanbpeterson.com/Psy230H\nPlaylist: \n2015 \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/AdAdf4watJQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/AdAdf4watJQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/AdAdf4watJQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/AdAdf4watJQ/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 33,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "AdAdf4watJQ"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "jPYQMl03PWF_3mPnr-ud7rB3jzc",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC42MTI4Njc2QjM1RjU1MjlG",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:23:14Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "Lecture: 2017 Maps of Meaning 01: Context and Background",
+                "description": "In this lecture, I discuss the context within which the theory I am delineating through this course emerge: that of the cold war. What is belief? Why is it so important to people? Why will they fight to protect it? I propose that belief unites a culture's expectations and desires with the actions of its people, and that the match between those two allows for cooperative action and maintains emotional stability. I suggest, further, that culture has a deep narrative structure, presenting the world as a forum for action, with characters representing the individual, the known, and the unknown -- or the individual, culture and nature -- or the individual, order and chaos. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/I8Xc2_FtpHI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/I8Xc2_FtpHI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/I8Xc2_FtpHI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/I8Xc2_FtpHI/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 34,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "I8Xc2_FtpHI"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "VLwgPuK8pmJly_PSpGWN4QaYUOI",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC45RjNFMDhGQ0Q2RkFCQTc1",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:23:24Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 02: Marionettes & Individuals (Part 1)",
+                "description": "In this lecture, I begin using a particular piece of dramatic art -- the Disney film Pinocchio -- to provide a specific example of the manner in which great mythological or archetypal themes inform and permeate narrative. \n\nMusic is Mozart Symphony 41: Jupiter. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/EN2lyN7rM4E/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/EN2lyN7rM4E/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/EN2lyN7rM4E/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/EN2lyN7rM4E/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 35,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "EN2lyN7rM4E"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "3mFoEnx_ReEGGLSBrEuLT6m77O4",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC40QTA3NTU2RkM1QzlCMzYx",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:23:39Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 03: Marionettes and Individuals (Part 2)",
+                "description": "In this lecture, I continue with the analysis of the Disney film Pinocchio to illustrate the manner in which great mythological or archetypal themes inform and permeate both the creation and the understanding of narratives. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Us979jCjHu8/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Us979jCjHu8/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Us979jCjHu8/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/Us979jCjHu8/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 36,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "Us979jCjHu8"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "_XFFKIObUuPGRf187TelXMkNYoc",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5BRjJDODk5REM0NjkzMUIy",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:23:54Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 04: Marionettes and Individuals (Part 3)",
+                "description": "In this lecture, I conclude my analysis of the Disney film Pinocchio, which I conducted to illustrate how archetypal/mythological themes permeate popular culture. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/bV16NEWld8Q/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/bV16NEWld8Q/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/bV16NEWld8Q/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/bV16NEWld8Q/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/bV16NEWld8Q/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 37,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "bV16NEWld8Q"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "d8HUtyeRpxoRcX8XnKKPEArOhYY",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4xOTEzQzhBQzU3MDNDNjcz",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:24:06Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 05: Story and Metastory (Part 1)",
+                "description": "In this lecture, I make the case that we each inhabit a story, describing where we are, where we are going, and the actions we must undertake to get from the former to the latter. These inhabited stories are predicated on an underlying value system (as we must want to be where we are going more than we value where we are). In addition, they are frames of reference, allowing us to perceive (things that move us along; things that get in our way), make most of the world irrelevant (things that have no bearing on our current frame), and determine emotional significance (positive: things that move us along; negative: things that get in our way).\n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/RudKmwzDpNY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/RudKmwzDpNY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/RudKmwzDpNY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/RudKmwzDpNY/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/RudKmwzDpNY/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 38,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "RudKmwzDpNY"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "kTfYac3uecZ5soScH65l8b1daS8",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5GNDg1Njc1QzZERjlFRjE5",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:24:17Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 06: Story and Metastory (Part 2)",
+                "description": "In this lecture, I discuss uncertainty, or anomaly. We frame the world -- or the world reveals itself to us -- as a story, with a starting point, a destination, and the behavioral means to move from one to the other. The destination is valued more highly than the starting point, and constitutes the point of the story -- the aim of the individual. Reality manifests itself within that story as what is relevant for forward movement, what gets in the way, and what is irrelevant and can be safely ignored. The largest category, by far, is the latter. Unfortunately, sometimes what has been happily classified as irrelevant rears up and gets in the way. That's a manifestation of chaos. Chaos can undermine the story, or break the frame. The degree of undermining or breakage is proportional to the time and space over which the story in question extends its operations.\n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/nsZ8XqHPjI4/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/nsZ8XqHPjI4/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/nsZ8XqHPjI4/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/nsZ8XqHPjI4/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/nsZ8XqHPjI4/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 39,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "nsZ8XqHPjI4"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "NMXPWqBzGK5R6U7Yw8WQlxUTsbg",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4zQzFBN0RGNzNFREFCMjBE",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:24:30Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 07: Images of Story & Metastory",
+                "description": "In this lecture, I discuss how the basic or archetypal categories we use to frame the world are represented in image, where they existed long before their nature could be articulated. These categories include the individual (hero/adversary), culture (wise king/tyrant), and nature (destruction/creation). The heroic individual (the knower) is typically masculine, as is culture (the known), while the unknown is feminine. These categories can be conceptualized, as well, as explorer, explored territory, and unexplored territory. The most abstract category is the dragon of chaos, the monster who guards what is most valuable. It is from this most primordial of categories that the other three emerge. Our existence as prey and predator is reflected in the ambivalent representation of the absolute unknown.\n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/F3n5qtj89QE/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/F3n5qtj89QE/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/F3n5qtj89QE/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/F3n5qtj89QE/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/F3n5qtj89QE/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 40,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "F3n5qtj89QE"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "3WB0ig4HR9Sst2cbutCmu7-mMEM",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC45NkVENTkxRDdCQUFBMDY4",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:24:41Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 08: Neuropsychology of Symbolic Representation",
+                "description": "In this lecture, I discuss the relationship between the basic categories of imagistic/symbolic representation and brain function, noting that the very hemispheres of the brain are adapted, right/left to the environmental or experiential permanence of chaos/order or unexplored/explored territory, with consciousness serving the Logos role of communicative explorer (a function related in one of its deepest manifestations to the function of the hypothalamically grounded dopaminergic systems).\n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/Nb5cBkbQpGY/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/Nb5cBkbQpGY/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/Nb5cBkbQpGY/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/Nb5cBkbQpGY/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/Nb5cBkbQpGY/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 41,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "Nb5cBkbQpGY"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "IdttHOVn1cKMLNWS7rzHIjKk4Vo",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5DNkMwRUI2MkI4QkI4NDFG",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:24:49Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 09: Patterns of Symbolic Representation",
+                "description": "In this lecture, I discuss the manner in which the fundamental symbolic archetypes (particularly those dealing with the Wise King and Tyrant) are hijacked for the purposes of propaganda. Ideologies are parasites. Their hosts are archetypes. Knowledge of the underlying archetypes can produce immunity against ideological possession. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/yXZSeiAl4PI/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/yXZSeiAl4PI/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/yXZSeiAl4PI/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 42,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "yXZSeiAl4PI"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "sE5j0xiY5jdP4h0WH8Q4iNJ7Zy4",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC5DRUQwODMxQzUyRTlGRkY3",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:25:09Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 10: Genesis and the Buddha",
+                "description": "In this lecture, I discuss the creation stories in Genesis, the first book of the Bible, and describe the parallels with the stories of the development of the Buddha from childhood to early adulthood, using the archetypal schema developed previous in the course. \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/7XtEZvLo-Sc/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/7XtEZvLo-Sc/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/7XtEZvLo-Sc/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/7XtEZvLo-Sc/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/7XtEZvLo-Sc/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 43,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "7XtEZvLo-Sc"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "wdOtzsUULL0ESjcOW7uEg8toNwE",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC41MzY4MzcwOUFFRUU3QzEx",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:25:19Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 11: The Flood and the Tower",
+                "description": "In this lecture, I continue my discussion of the archaic stories at the beginning of Genesis, including Cain and Abel, and the flood story of Noah (the return of chaos), and the story of the Tower of Babel (which I am reading as a very old warning about the danger of erecting something akin to a totalitarian/utopian secular state -- so that is pathological order).\n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/T4fjSrVCDvA/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/T4fjSrVCDvA/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/T4fjSrVCDvA/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/T4fjSrVCDvA/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/T4fjSrVCDvA/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 44,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "T4fjSrVCDvA"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        },
+        {
+            "kind": "youtube#playlistItem",
+            "etag": "YMrY5OZKTlxYwoxE34mpkshz0VU",
+            "id": "UEwyMkozVmFlQUJRQ241blRBeDY1TlJsaDFFc0tEMFVRRC4yQjZFRkExQjFGODk3RUFD",
+            "snippet": {
+                "publishedAt": "2023-01-23T21:26:03Z",
+                "channelId": "UCL_f53ZEJxp8TtlOkHwMV9Q",
+                "title": "2017 Maps of Meaning 12: Final: The Divinity of the Individual",
+                "description": "In this, the final Maps of Meaning lecture for 2017, I review the year and its offerings: What is a belief system? Why are people so inclined to engage in conflict to protect their belief systems?\n\nIt's partly because our belief systems are not only systems of belief, but structures that serve to render everyone who participates in that belief and its dramatization and acting out in the world predictable, trustworthy and cooperative (even when competing). \n\nIs there a hierarchy of rank or value among belief systems, or are they merely arbitrary? \n\nWhat is the relationship between descriptions of the objective world and moral guidelines? How do you determine how to conduct yourself in the world? What should you do (and is that question even genuine -- or answerable?) \n\nWhat inbuilt structures do you bring into the world, as a consequence of biological evolution, that help you orient yourself in life, in the face of its overwhelming complexity? What is the relationship between the games that children learn to play when becoming socialized and the cultural structures that guide us in broader society? How is all this related to the underlying symbolic structures (religious structures) that sit at the base of our societies and belief structures? \n\n--- SUPPORT THIS CHANNEL ---\n\nDirect Support: https://www.jordanbpeterson.com/donate\nMerchandise: https://teespring.com/stores/jordanbpeterson\n\n--- BOOKS ---\n\n12 Rules for Life: An Antidote to Chaos: https://jordanbpeterson.com/12-rules-for-life/\nMaps of Meaning: The Architecture of Belief: https://jordanbpeterson.com/maps-of-meaning/\n\n--- LINKS ---\n\nWebsite: https://jordanbpeterson.com/\n12 Rules for Life Tour: https://jordanbpeterson.com/events/\nBlog: https://jordanbpeterson.com/blog/\nPodcast: https://jordanbpeterson.com/podcast/\nReading List: https://jordanbpeterson.com/great-books/\nTwitter: https://twitter.com/jordanbpeterson\nInstagram: https://www.instagram.com/jordan.b.peterson/\nFacebook: https://www.facebook.com/drjordanpeterson\n\n--- PRODUCTS ---\n\nPersonality Course: https://www.jordanbpeterson.com/personality\nSelf Authoring Suite: https://selfauthoring.com/\nUnderstand Myself personality test: https://understandmyself.com/\nMerchandise: https://teespring.com/stores/jordanbpeterson",
+                "thumbnails": {
+                    "default": {
+                        "url": "https://i.ytimg.com/vi/6V1eMvGGcXQ/default.jpg",
+                        "width": 120,
+                        "height": 90
+                    },
+                    "medium": {
+                        "url": "https://i.ytimg.com/vi/6V1eMvGGcXQ/mqdefault.jpg",
+                        "width": 320,
+                        "height": 180
+                    },
+                    "high": {
+                        "url": "https://i.ytimg.com/vi/6V1eMvGGcXQ/hqdefault.jpg",
+                        "width": 480,
+                        "height": 360
+                    },
+                    "standard": {
+                        "url": "https://i.ytimg.com/vi/6V1eMvGGcXQ/sddefault.jpg",
+                        "width": 640,
+                        "height": 480
+                    },
+                    "maxres": {
+                        "url": "https://i.ytimg.com/vi/6V1eMvGGcXQ/maxresdefault.jpg",
+                        "width": 1280,
+                        "height": 720
+                    }
+                },
+                "channelTitle": "Jordan B Peterson",
+                "playlistId": "PL22J3VaeABQCn5nTAx65NRlh1EsKD0UQD",
+                "position": 45,
+                "resourceId": {
+                    "kind": "youtube#video",
+                    "videoId": "6V1eMvGGcXQ"
+                },
+                "videoOwnerChannelTitle": "Jordan B Peterson",
+                "videoOwnerChannelId": "UCL_f53ZEJxp8TtlOkHwMV9Q"
+            }
+        }
+    ],
+    "pageInfo": {
+        "totalResults": 46,
+        "resultsPerPage": 50
+    }
+}

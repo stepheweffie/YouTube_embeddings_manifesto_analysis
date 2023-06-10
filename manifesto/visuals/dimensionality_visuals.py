@@ -5,19 +5,28 @@ from scipy.cluster import hierarchy
 from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 from sklearn.cluster import KMeans
+import seaborn as sns
 
 
-def cosine_similarity_plot(dataframe):
-    df = dataframe
-    # Assuming your dataframe is named "df" and the embeddings are in a column named "embeddings"
+def cosine_similarity_plot(manifesto, transcript):
+    X = manifesto
+    Y = transcript
     # Calculate the cosine similarity between all pairs of embeddings in the dataframe
-    similarity_matrix = cosine_similarity(df["embeddings"].tolist())
+    similarity_matrix = cosine_similarity(X, Y, dense_output=True)
     # Plot the embeddings in a scatter plot based on their cosine similarity
-    fig, ax = plt.subplots()
-    scatter = ax.scatter(df["x"], df["y"], c=similarity_matrix.flatten())
-    ax.set_xlabel("X")
-    ax.set_ylabel("Y")
-    plt.colorbar(scatter)
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(similarity_matrix, cmap='cubehelix')
+
+
+def pca_reduce_dimensionality(dataframe):
+    # Assume embeddings_df is your DataFrame of embeddings
+    pca = PCA(n_components=2)
+    embeddings_2d = pca.fit_transform(dataframe)
+    plt.figure(figsize=(8,6))
+    plt.scatter(embeddings_2d[:,0], embeddings_2d[:,1])
+    plt.xlabel('PC1')
+    plt.ylabel('PC2')
+    plt.title('2D PCA of Embeddings')
     plt.show()
 
 
@@ -42,7 +51,7 @@ def hierarchy_plot(dataframe):
     df = dataframe
     # Assuming your dataframe is named "df" and the embeddings are in a column named "embeddings"
     # Calculate the cosine similarity between all pairs of embeddings in the dataframe
-    similarity_matrix = cosine_similarity(df["embeddings"].tolist())
+    similarity_matrix = cosine_similarity(df)
     # Perform hierarchical clustering on the similarity matrix
     linkage_matrix = hierarchy.linkage(similarity_matrix, method="complete")
     # Plot the resulting clustering tree
@@ -50,6 +59,20 @@ def hierarchy_plot(dataframe):
     dendrogram = hierarchy.dendrogram(linkage_matrix, ax=ax)
     ax.set_xlabel("Embeddings")
     ax.set_ylabel("Distance")
+    plt.show()
+
+
+def heatmap(corr_df1, corr_df2):
+    # Create a heatmap for each correlation matrix, and preserve the column labels
+    sns.heatmap(corr_df1, ax=ax[0], cmap='coolwarm', cbar=False)
+    ax[0].set_title('DataFrame 1 Correlation Heatmap')
+    ax[0].set_xticklabels(ax[0].get_xmajorticklabels(), fontsize=10)
+
+    sns.heatmap(corr_df2, ax=ax[1], cmap='coolwarm')
+    ax[1].set_title('DataFrame 2 Correlation Heatmap')
+    ax[1].set_xticklabels(ax[1].get_xmajorticklabels(), fontsize=10)
+
+    plt.tight_layout()
     plt.show()
 
 
