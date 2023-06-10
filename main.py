@@ -26,7 +26,6 @@ first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based locati
 video_data = pd.read_pickle(f'manifesto/data/single_video_openai_embeddings.pkl')
 df1 = pd.DataFrame(video_data)
 df2 = pd.DataFrame(data)
-distances = distance.cdist(df1.values, df2.values, 'euclidean')
 correlation = df1.corrwith(df2, axis=1)
 
 # Assuming df1 and df2 are your two dataframes containing BERT embeddings
@@ -34,20 +33,21 @@ similarity = cosine_similarity(df1.mean(axis=0).values.reshape(1, -1), df2.mean(
 print(f"The cosine similarity between the two documents is {similarity[0][0]}")
 # The cosine similarity between the two documents is 0.854043123080344
 
-# fitting the MDS with n_components as 2
-mds = MDS(n_components=2)
-projected_distances = mds.fit_transform(distances)
-
-plt.scatter(projected_distances[:, 0], projected_distances[:, 1])
-plt.show()
 # create a scaler object
 scaler = StandardScaler()
 # fit and transform the data
 df1_normalized = pd.DataFrame(scaler.fit_transform(df1), columns = df1.columns)
 # Do the same for df2
 df2_normalized = pd.DataFrame(scaler.fit_transform(df2), columns = df2.columns)
+distances = distance.cdist(df1_normalized.values, df2_normalized.values, 'euclidean')
+# fitting the MDS with n_components as 2
+mds = MDS(n_components=2)
+projected_distances = mds.fit_transform(distances)
 
+plt.scatter(projected_distances[:, 0], projected_distances[:, 1])
+plt.show()
 # Assuming df1 and df2 are your dataframes, and that they are already normalized
+
 # Let's assume df2 has more columns than df1
 print(df1_normalized.shape[0], df2_normalized.shape[0])
 # Let's assume df2 has more rows than df1
