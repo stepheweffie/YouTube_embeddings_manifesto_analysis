@@ -11,7 +11,6 @@ from sklearn.metrics import silhouette_score
 import tensorflow as tf
 from keras.preprocessing.text import Tokenizer
 from keras.utils import pad_sequences
-import nltk.data
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
 # If you haven't downloaded these NLTK resources yet, you will need to do so
@@ -26,12 +25,14 @@ channel_name = '@JordanBPeterson'
 
 # Load the dataset of your personal writing to train a model to write in your style
 
-class TrainingTask(d6tflow.tasks.TaskPqPandas)
+
+class TrainingTask(d6tflow.tasks.TaskPqPandas):
     def requires(self):
         return TrainingPreprocessTask()
 
     def run(self):
         self.save(output)
+
 
 class BinaryTrainingTask(d6tflow.tasks.TaskPqPandas):  # TaskPqPandas is a task that loads/saves dataframes in parquet format
     def requires(self):
@@ -89,7 +90,7 @@ class BinaryTrainingTask(d6tflow.tasks.TaskPqPandas):  # TaskPqPandas is a task 
 
 class BinaryClassifierTask(d6tflow.tasks.TaskPickle):  # Assuming you have a defined Task
     def requires(self):
-        return TrainingTask()
+        return BinaryTrainingTask()
 
     def run(self):
         data = self.inputLoad()  # Load your data

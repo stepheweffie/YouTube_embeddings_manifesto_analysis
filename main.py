@@ -7,14 +7,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.cluster import DBSCAN
-from sklearn.preprocessing import StandardScaler
-from sklearn.manifold import TSNE
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sklearn.manifold import TSNE, MDS
 import umap
 from manifesto.visuals.dimensionality_visuals import cosine_similarity_plot
 
 
 data = pd.read_pickle(f'manifesto/data/PDFEmbeddingsTask/PDFEmbeddingsTask__99914b932b-data.pkl')
 data = data['pdf_embeddings']
+
+# PDF data is stored in the variable 'data'
+scaler = MinMaxScaler()
+scaled_data = scaler.fit_transform(data)
+
+# Detect
 
 first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based location
 video_data = pd.read_pickle(f'manifesto/data/single_video_openai_embeddings.pkl')
@@ -23,6 +29,17 @@ df2 = pd.DataFrame(data)
 distances = distance.cdist(df1.values, df2.values, 'euclidean')
 correlation = df1.corrwith(df2, axis=1)
 
+# Assuming df1 and df2 are your two dataframes containing BERT embeddings
+similarity = cosine_similarity(df1.mean(axis=0).values.reshape(1, -1), df2.mean(axis=0).values.reshape(1, -1))
+print(f"The cosine similarity between the two documents is {similarity[0][0]}")
+# The cosine similarity between the two documents is 0.854043123080344
+
+# fitting the MDS with n_components as 2
+mds = MDS(n_components=2)
+projected_distances = mds.fit_transform(distances)
+
+plt.scatter(projected_distances[:, 0], projected_distances[:, 1])
+plt.show()
 # create a scaler object
 scaler = StandardScaler()
 # fit and transform the data
@@ -37,16 +54,12 @@ print(df1_normalized.shape[0], df2_normalized.shape[0])
 if df2_normalized.shape[0] > df1_normalized.shape[0]:
     # Calculate difference in number of rows
     diff = df2_normalized.shape[0] - df1_normalized.shape[0]
-    print(diff)
     # Create a new dataframe of zeros with 'diff' rows and the same number of columns as df1
     padding_df = pd.DataFrame(np.zeros((diff, df1_normalized.shape[1])))
     # Concatenate df1 with the padding dataframe along axis 0 (vertically)
     df1_padded = pd.concat([df1_normalized, padding_df], axis=0).reset_index(drop=True)
-    print(df1_padded.shape, df2_normalized.shape)
     cos_sim_plot = cosine_similarity_plot(df1_padded, df2_normalized)
-
-cos_sim = cosine_similarity(df1_normalized.values, df2_normalized.values)
-print(cos_sim)
+    plt.show()
 
 # Perform PCA
 pca = PCA(n_components=2)
@@ -136,7 +149,7 @@ for i, component in enumerate(components):
 concatenated_df = data
 
 # Create a pairplot
-sns.pairplot(data, hue='cluster')
+sns.pairplot(data)
 plt.show()
 
 
