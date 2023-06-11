@@ -30,7 +30,7 @@ correlation = df1.corrwith(df2, axis=1)
 
 # Assuming df1 and df2 are your two dataframes containing BERT embeddings
 similarity = cosine_similarity(df1.mean(axis=0).values.reshape(1, -1), df2.mean(axis=0).values.reshape(1, -1))
-print(f"The cosine similarity between the two documents is {similarity[0][0]}")
+print(f"The cosine similarity for OpenAI embeddings between the two documents is {similarity[0][0]}")
 # The cosine similarity between the two documents is 0.854043123080344
 
 # create a scaler object

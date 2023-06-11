@@ -1,6 +1,5 @@
 import numpy as np
 import pickle
-from sklearn.decomposition import LatentDirichletAllocation
 from preprocess import TrainingPreprocessTask
 from d6tflow import Workflow
 from gensim import corpora, models
