@@ -6,20 +6,27 @@ from sklearn.metrics.pairwise import cosine_similarity
 import pandas as pd
 from sklearn.cluster import KMeans
 import seaborn as sns
+import numpy as np
 
 
 def cosine_similarity_plot(manifesto, transcript):
     X = manifesto
     Y = transcript
+
     # Calculate the cosine similarity between all pairs of embeddings in the dataframe
     similarity_matrix = cosine_similarity(X, Y, dense_output=True)
-    # Plot the embeddings in a scatter plot based on their cosine similarity
+
+    # Assuming cosine_similarities is a 1D array of cosine similarities
     plt.figure(figsize=(8, 6))
-    sns.heatmap(similarity_matrix, cmap='cubehelix')
+    plt.hist(similarity_matrix, bins=50)
+    plt.xlabel('Cosine Similarity')
+    plt.ylabel('Frequency')
+    plt.show()
 
 
 def pca_reduce_dimensionality(dataframe):
-    # Assume embeddings_df is your DataFrame of embeddings
+    # DataFrame of embeddings
+    # Apply PCA to reduce the dimensionality to 2D
     pca = PCA(n_components=2)
     embeddings_2d = pca.fit_transform(dataframe)
     plt.figure(figsize=(8,6))

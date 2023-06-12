@@ -10,40 +10,65 @@ from sklearn.cluster import DBSCAN
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.manifold import TSNE, MDS
 import umap
-from manifesto.visuals.dimensionality_visuals import cosine_similarity_plot
-
+from manifesto.visuals.dimensionality_visuals import cosine_similarity_plot, pca_reduce_dimensionality
 
 data = pd.read_pickle(f'manifesto/data/PDFEmbeddingsTask/PDFEmbeddingsTask__99914b932b-data.pkl')
-data = data['pdf_embeddings']
+pdf_ada_data = data['pdf_embeddings']
+data = pd.read_pickle(f'manifesto/data/BertEmbeddingsTask/BertEmbeddingsTask__99914b932b-data.pkl')
+# bert_data = pd.DataFrame(data)  # a (1,2) array dataframe of transcript and manifesto BERT embeddings
+# PDF data is stored in the variable 'pdf_ada_data'
+data = pd.DataFrame(data['model'])
 
-# PDF data is stored in the variable 'data'
 scaler = MinMaxScaler()
-scaled_data = scaler.fit_transform(data)
+# data = scaler.fit_transform(data_array)
+# create a scaler object
+# scaler = StandardScaler()
 
+# fit and transform the data
+df1_normalized = pd.DataFrame(scaler.fit_transform(data['transcript_bert_embeddings'][0]))
+# Do the same for df2
+df2_normalized = pd.DataFrame(scaler.fit_transform(data['pdf_bert_embeddings'][0]))
+# pca_reduce_dimensionality(data)
 # Detect
 
-first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based location
+# first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based location
 video_data = pd.read_pickle(f'manifesto/data/single_video_openai_embeddings.pkl')
 df1 = pd.DataFrame(video_data)
-df2 = pd.DataFrame(data)
-correlation = df1.corrwith(df2, axis=1)
+df2 = pd.DataFrame(pdf_ada_data)
+# text-embeddings-ada-002 cosine similarity histogram
+cosine_similarity_plot(df1, df2)
 
-# Assuming df1 and df2 are your two dataframes containing BERT embeddings
+# df1['similarities'] = df1.apply(lambda x: cosine_similarity(x, embedding))
+# df1.sort_values('similarities', ascending=False)
+# df2['similarities'] = df2.apply(lambda x: cosine_similarity(x, embedding))
+# df2.sort_values('similarities', ascending=False)
+
+correlation = df1.corrwith(df2, axis=1)
+# Histogram of correlation coefficients
+plt.figure(figsize=(8, 6))
+plt.hist(correlation, bins=50)
+plt.title('Histogram of Correlation Coefficients')
+plt.xlabel('Correlation Coefficient')
+plt.ylabel('Frequency')
+plt.show()
+
+# 2. Line plot
+plt.figure(figsize=(10, 8))
+plt.plot(correlation)
+plt.title('Line Plot of Correlation Coefficients')
+plt.xlabel('Pair Index')
+plt.ylabel('Correlation Coefficient')
+plt.show()
+
+# Assuming df1 and df2 are your two dataframes containing ada-002 embeddings
 similarity = cosine_similarity(df1.mean(axis=0).values.reshape(1, -1), df2.mean(axis=0).values.reshape(1, -1))
 print(f"The cosine similarity for OpenAI embeddings between the two documents is {similarity[0][0]}")
 # The cosine similarity between the two documents is 0.854043123080344
 
-# create a scaler object
-scaler = StandardScaler()
-# fit and transform the data
-df1_normalized = pd.DataFrame(scaler.fit_transform(df1), columns = df1.columns)
-# Do the same for df2
-df2_normalized = pd.DataFrame(scaler.fit_transform(df2), columns = df2.columns)
 distances = distance.cdist(df1_normalized.values, df2_normalized.values, 'euclidean')
 # fitting the MDS with n_components as 2
 mds = MDS(n_components=2)
 projected_distances = mds.fit_transform(distances)
-
 plt.scatter(projected_distances[:, 0], projected_distances[:, 1])
 plt.show()
 # Assuming df1 and df2 are your dataframes, and that they are already normalized
@@ -65,18 +90,26 @@ if df2_normalized.shape[0] > df1_normalized.shape[0]:
 pca = PCA(n_components=2)
 reduced_df1 = pca.fit_transform(df1_normalized)
 reduced_df2 = pca.fit_transform(df2_normalized)
-# print(pca.components_)
 
 # Plot the results
 plt.scatter(reduced_df1[:, 0], reduced_df1[:, 1], label='Video', alpha=0.5)
 plt.scatter(reduced_df2[:, 0], reduced_df2[:, 1], label='Manifesto', alpha=0.5)
 plt.legend()
-plt.title('Video vs Manifesto Text Embeddings')  # Set the title of the plot
+plt.title('PCA Video vs Manifesto BERT Embeddings')  # Set the title of the plot
 plt.show()
 
 # Create a correlation matrix for each dataframe
 corr_df1 = df1_normalized.corr()
 corr_df2 = df2_normalized.corr()
+# Plot the correlation matrices
+fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(12, 5))
+sns.heatmap(corr_df1, ax=ax1, cmap='coolwarm', cbar=False)
+ax1.set_title('Correlation Matrix 1')
+sns.heatmap(corr_df2, ax=ax2, cmap='coolwarm', yticklabels=False)
+ax2.set_title('Correlation Matrix 2')
+plt.show()
+
+# Reduce the dimensionality of each dataframe
 reduced_df1 = pd.DataFrame(reduced_df1)
 reduced_df2 = pd.DataFrame(reduced_df2)
 # Assuming df1 and df2 are your PCA-transformed dataframes
@@ -124,9 +157,6 @@ plt.xlabel('Principal components')
 plt.tight_layout()
 plt.show()
 
-# Get the principal components
-pca_components = pca.components_
-
 # Display the contributions of original variables to PC1 and PC2
 # print("PC1 contributions:", pca_components[0])
 # print("PC2 contributions:", pca_components[1])
@@ -159,7 +189,6 @@ df1 = df1_normalized
 # Next, we'll use t-SNE to reduce the dimensionality of your embeddings to 2 dimensions
 tsne = TSNE(n_components=2, random_state=42)
 embeddings_2d = tsne.fit_transform(data)
-
 # Now we can plot the results. We'll use different colors for embeddings from df1 and df2
 plt.figure(figsize=(6, 6))
 plt.scatter(embeddings_2d[:len(df1), 0], embeddings_2d[:len(df1), 1], label='df1')
@@ -169,16 +198,13 @@ plt.show()
 
 
 # Concatenate your two dataframes along the row axis
-df = pd.concat([df1_normalized, df2_normalized], axis=0)
-
+df = data
 # Run UMAP on your combined dataframe
 reducer = umap.UMAP()
 embedding = reducer.fit_transform(df)
-
 # Split the transformed data back into two parts
 embedding1 = embedding[:len(df1_normalized)]
 embedding2 = embedding[len(df1_normalized):]
-
 # Plot the results
 plt.scatter(embedding1[:, 0], embedding1[:, 1], label='df1', s=5)
 plt.scatter(embedding2[:, 0], embedding2[:, 1], label='df2', s=5)
