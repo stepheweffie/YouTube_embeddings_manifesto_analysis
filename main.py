@@ -11,24 +11,34 @@ from sklearn.preprocessing import StandardScaler, MinMaxScaler
 from sklearn.manifold import TSNE, MDS
 import umap
 from manifesto.visuals.dimensionality_visuals import cosine_similarity_plot, pca_reduce_dimensionality
+# create a scaler object
+scaler = StandardScaler()
 
 data = pd.read_pickle(f'manifesto/data/PDFEmbeddingsTask/PDFEmbeddingsTask__99914b932b-data.pkl')
-pdf_ada_data = data['pdf_embeddings']
-data = pd.read_pickle(f'manifesto/data/BertEmbeddingsTask/BertEmbeddingsTask__99914b932b-data.pkl')
-# bert_data = pd.DataFrame(data)  # a (1,2) array dataframe of transcript and manifesto BERT embeddings
-# PDF data is stored in the variable 'pdf_ada_data'
-data = pd.DataFrame(data['model'])
+pdf_data = data['pdf_embeddings']
+pdf_data = pd.DataFrame(pdf_data)
+df2_normalized = pd.DataFrame(scaler.fit_transform(pdf_data[0]))
+# data = pd.read_pickle(f'manifesto/data/BertEmbeddingsTask/BertEmbeddingsTask__99914b932b-data.pkl')
+# data = pd.DataFrame(data)
+# data = pd.DataFrame(data['model'])
+data = pd.read_pickle(f'manifesto/data/SingleVideoEmbeddingsTask/SingleVideoEmbeddingsTask__99914b932b-data.pkl')
+data = pd.DataFrame(data)  # a (1,2) array dataframe of transcript and manifesto BERT embeddings
+df1_normalized = pd.DataFrame(scaler.fit_transform(data['text_embeddings'][0]))
 
-scaler = MinMaxScaler()
-# data = scaler.fit_transform(data_array)
-# create a scaler object
-# scaler = StandardScaler()
 
-# fit and transform the data
-df1_normalized = pd.DataFrame(scaler.fit_transform(data['transcript_bert_embeddings'][0]))
+# df1_normalized = pd.DataFrame(scaler.fit_transform(data['transcript_bert_embeddings'][0]))
 # Do the same for df2
-df2_normalized = pd.DataFrame(scaler.fit_transform(data['pdf_bert_embeddings'][0]))
-# pca_reduce_dimensionality(data)
+# df2_normalized = pd.DataFrame(scaler.fit_transform(data['pdf_bert_embeddings'][0]))
+
+
+
+# data = scaler.fit_transform(data_array)
+
+
+# fit and transform the data for the BERT or the ada embeddings
+
+pca_reduce_dimensionality(data)
+
 # Detect
 
 # first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based location

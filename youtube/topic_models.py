@@ -9,7 +9,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import TruncatedSVD
 from transformers import BertForSequenceClassification, BertTokenizer, Trainer, TrainingArguments
 import d6tflow
+from sklearn.preprocessing import MinMaxScaler
 # import cfg, tasks, visualize
+scaler = MinMaxScaler()
 
 
 class TransformerTask(d6tflow.tasks.TaskPickle):
