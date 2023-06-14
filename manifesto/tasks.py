@@ -23,3 +23,5 @@ class PDFEmbeddingsTask(d6tflow.tasks.TaskPickle):
         self.save(data)
 
 
+flow = d6tflow.Workflow()
+flow.run(SingleVideoEmbeddingsTask)

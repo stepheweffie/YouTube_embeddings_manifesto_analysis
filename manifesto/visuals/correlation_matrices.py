@@ -19,8 +19,8 @@ def networkx_graph(corr_matrx):
     # Create a networkx graph
     G = nx.Graph()
     # Add edges to the graph for each correlation
-    for column in corr_matrx.columns:
-        for index in corr_matrx.index:
+    for column in corr_matrx:
+        for index in corr_matrx:
             # We only add an edge between different nodes and if the correlation is above a threshold
             if index != column and corr_matrx.loc[index, column] > 0.7:
                 G.add_edge(index, column, weight=corr_matrx.loc[index, column])

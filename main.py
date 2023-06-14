@@ -16,6 +16,12 @@ from manifesto.visuals.correlation_matrices import networkx_graph
 # create a scaler object
 scaler = StandardScaler()
 
+data = pd.read_pickle(f'manifesto/data/single_video_openai_embeddings.pkl')
+video_data = data
+video_dataframe = pd.DataFrame(video_data)
+df1_normalized = pd.DataFrame(scaler.fit_transform(video_dataframe))
+
+# Do the same for df2
 data = pd.read_pickle(f'manifesto/data/PDFEmbeddingsTask/PDFEmbeddingsTask__99914b932b-data.pkl')
 pdf_data = data['pdf_embeddings']
 pdf_dataframe = pd.DataFrame(pdf_data)
@@ -24,16 +30,15 @@ df2_normalized = pd.DataFrame(scaler.fit_transform(pdf_dataframe))
 # data = pd.read_pickle(f'manifesto/data/BertEmbeddingsTask/BertEmbeddingsTask__99914b932b-data.pkl')
 # data = pd.DataFrame(data)
 # data = pd.DataFrame(data['model'])
-
-data = pd.read_pickle(f'manifesto/data/SingleVideoEmbeddingsTask/SingleVideoEmbeddingsTask__99914b932b-data.pkl')
-video_data = data['video_embeddings']
-video_dataframe = pd.DataFrame(video_data)  # a (1,2) array dataframe of transcript and manifesto embeddings
-df1_normalized = pd.DataFrame(scaler.fit_transform(video_dataframe))
-
 # df1_normalized = pd.DataFrame(scaler.fit_transform(data['transcript_bert_embeddings'][0]))
-# Do the same for df2
 # df2_normalized = pd.DataFrame(scaler.fit_transform(data['pdf_bert_embeddings'][0]))
 
+df1 = video_dataframe
+df2 = pdf_dataframe
+# first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based location
+
+# text-embeddings-ada-002 cosine similarity histogram
+cosine_similarity_plot(df1, df2)
 
 # data = scaler.fit_transform(data_array)
 # fit and transform the data for the BERT or the ada embeddings
@@ -41,15 +46,6 @@ df1_normalized = pd.DataFrame(scaler.fit_transform(video_dataframe))
 # pca_reduce_dimensionality(data)
 
 # Detect
-df1 = video_dataframe
-df2 = pdf_dataframe
-# first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based location
-# video_data = pd.read_pickle(f'manifesto/data/single_video_openai_embeddings.pkl')
-# df1 = pd.DataFrame(video_data)
-# df2 = pd.DataFrame(pdf_data)
-# text-embeddings-ada-002 cosine similarity histogram
-cosine_similarity_plot(df1, df2)
-
 # df1['similarities'] = df1.apply(lambda x: cosine_similarity(x, embedding))
 # df1.sort_values('similarities', ascending=False)
 # df2['similarities'] = df2.apply(lambda x: cosine_similarity(x, embedding))
