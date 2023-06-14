@@ -52,7 +52,6 @@ cosine_similarity_plot(df1, df2)
 # df2.sort_values('similarities', ascending=False)
 
 correlation = df1.corrwith(df2, axis=1)
-
 # Histogram of correlation coefficients
 plt.figure(figsize=(8, 6))
 plt.hist(correlation, bins=50)
@@ -61,7 +60,7 @@ plt.xlabel('Correlation Coefficient')
 plt.ylabel('Frequency')
 plt.show()
 
-# 2. Line plot
+# 2. Line plot of correlation coefficients
 plt.figure(figsize=(10, 8))
 plt.plot(correlation)
 plt.title('Line Plot of Correlation Coefficients')
@@ -69,8 +68,13 @@ plt.xlabel('Pair Index')
 plt.ylabel('Correlation Coefficient')
 plt.show()
 
-# 3 Networkx graph
-networkx_graph(correlation)
+# concatenate the two dataframes along the columns
+df = pd.concat([df1, df2], axis=1)
+# calculate the correlation matrix
+corr_matrix = df.corr()
+
+# 3 Networkx graph of the correlation matrix
+networkx_graph(corr_matrix)
 
 # Assuming df1 and df2 are your two dataframes containing ada-002 embeddings
 similarity = cosine_similarity(df1.mean(axis=0).values.reshape(1, -1), df2.mean(axis=0).values.reshape(1, -1))
