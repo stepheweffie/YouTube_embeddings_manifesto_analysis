@@ -26,8 +26,8 @@ df2_normalized = pd.DataFrame(scaler.fit_transform(pdf_dataframe))
 # data = pd.DataFrame(data['model'])
 
 data = pd.read_pickle(f'manifesto/data/SingleVideoEmbeddingsTask/SingleVideoEmbeddingsTask__99914b932b-data.pkl')
-video_dataframe = pd.DataFrame(data)  # a (1,2) array dataframe of transcript and manifesto embeddings
-print(video_dataframe)
+video_data = data['video_embeddings']
+video_dataframe = pd.DataFrame(video_data)  # a (1,2) array dataframe of transcript and manifesto embeddings
 df1_normalized = pd.DataFrame(scaler.fit_transform(video_dataframe))
 
 # df1_normalized = pd.DataFrame(scaler.fit_transform(data['transcript_bert_embeddings'][0]))
