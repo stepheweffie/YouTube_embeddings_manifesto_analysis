@@ -7,44 +7,46 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.cluster import DBSCAN
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn.manifold import TSNE, MDS
 import umap
 from manifesto.visuals.dimensionality_visuals import cosine_similarity_plot, pca_reduce_dimensionality
+from manifesto.visuals.correlation_matrices import networkx_graph
+
 # create a scaler object
 scaler = StandardScaler()
 
 data = pd.read_pickle(f'manifesto/data/PDFEmbeddingsTask/PDFEmbeddingsTask__99914b932b-data.pkl')
 pdf_data = data['pdf_embeddings']
-pdf_data = pd.DataFrame(pdf_data)
-df2_normalized = pd.DataFrame(scaler.fit_transform(pdf_data[0]))
+pdf_dataframe = pd.DataFrame(pdf_data)
+df2_normalized = pd.DataFrame(scaler.fit_transform(pdf_dataframe))
+
 # data = pd.read_pickle(f'manifesto/data/BertEmbeddingsTask/BertEmbeddingsTask__99914b932b-data.pkl')
 # data = pd.DataFrame(data)
 # data = pd.DataFrame(data['model'])
-data = pd.read_pickle(f'manifesto/data/SingleVideoEmbeddingsTask/SingleVideoEmbeddingsTask__99914b932b-data.pkl')
-data = pd.DataFrame(data)  # a (1,2) array dataframe of transcript and manifesto BERT embeddings
-df1_normalized = pd.DataFrame(scaler.fit_transform(data['text_embeddings'][0]))
 
+data = pd.read_pickle(f'manifesto/data/SingleVideoEmbeddingsTask/SingleVideoEmbeddingsTask__99914b932b-data.pkl')
+video_dataframe = pd.DataFrame(data)  # a (1,2) array dataframe of transcript and manifesto embeddings
+print(video_dataframe)
+df1_normalized = pd.DataFrame(scaler.fit_transform(video_dataframe))
 
 # df1_normalized = pd.DataFrame(scaler.fit_transform(data['transcript_bert_embeddings'][0]))
 # Do the same for df2
 # df2_normalized = pd.DataFrame(scaler.fit_transform(data['pdf_bert_embeddings'][0]))
 
 
-
 # data = scaler.fit_transform(data_array)
-
-
 # fit and transform the data for the BERT or the ada embeddings
 
-pca_reduce_dimensionality(data)
+# pca_reduce_dimensionality(data)
 
 # Detect
-
+df1 = video_dataframe
+df2 = pdf_dataframe
 # first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based location
-video_data = pd.read_pickle(f'manifesto/data/single_video_openai_embeddings.pkl')
-df1 = pd.DataFrame(video_data)
-df2 = pd.DataFrame(pdf_ada_data)
+# video_data = pd.read_pickle(f'manifesto/data/single_video_openai_embeddings.pkl')
+# df1 = pd.DataFrame(video_data)
+# df2 = pd.DataFrame(pdf_data)
 # text-embeddings-ada-002 cosine similarity histogram
 cosine_similarity_plot(df1, df2)
 
@@ -54,6 +56,7 @@ cosine_similarity_plot(df1, df2)
 # df2.sort_values('similarities', ascending=False)
 
 correlation = df1.corrwith(df2, axis=1)
+
 # Histogram of correlation coefficients
 plt.figure(figsize=(8, 6))
 plt.hist(correlation, bins=50)
@@ -69,6 +72,9 @@ plt.title('Line Plot of Correlation Coefficients')
 plt.xlabel('Pair Index')
 plt.ylabel('Correlation Coefficient')
 plt.show()
+
+# 3 Networkx graph
+networkx_graph(correlation)
 
 # Assuming df1 and df2 are your two dataframes containing ada-002 embeddings
 similarity = cosine_similarity(df1.mean(axis=0).values.reshape(1, -1), df2.mean(axis=0).values.reshape(1, -1))

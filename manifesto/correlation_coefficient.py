@@ -29,12 +29,6 @@ plt.xlabel('Correlation Coefficient')
 plt.ylabel('Frequency')
 plt.show()
 
-# 2. Boxplot
-plt.figure(figsize=(8, 6))
-sns.boxplot(y=correlations)
-plt.title('Boxplot of Correlation Coefficients')
-plt.ylabel('Correlation Coefficient')
-plt.show()
 
 # 3. Line plot
 plt.figure(figsize=(8, 6))
