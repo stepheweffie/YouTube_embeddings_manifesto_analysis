@@ -49,11 +49,14 @@ vdf2.dropna()
 data_array = np.concatenate((vdf1, vdf2), axis=0)
 ldf1 = len(vdf1)
 ldf2 = len(data_array) - ldf1
+print(ldf1, ldf2)
+
 # Make sure both arrays are of the same length
-if len(vdf1) > len(vdf2):
-    vdf2 = np.append(vdf2, [None] * (len(vdf1) - len(vdf2)))
-elif len(vdf2) > len(vdf1):
-    vdf1 = np.append(vdf1, [None] * (len(vdf2) - len(vdf1)))
+if ldf1 != ldf2:
+    if ldf1 > ldf2:
+        vdf1 = vdf1[:ldf2]
+    else:
+        vdf2 = vdf2[:ldf1]
 
 # Initialize the KMeans model via vaex and fit the data
 kmeans = vaex.ml.cluster.KMeans(features=['x', 'y'], n_clusters=10)
@@ -148,12 +151,20 @@ if df2_normalized.shape[0] > df1_normalized.shape[0]:
 pca = PCA(n_components=2)
 reduced_df1 = pca.fit_transform(df1_normalized)
 reduced_df2 = pca.fit_transform(df2_normalized)
+centers = kmeans.cluster_centers_
+labels = kmeans.labels_
 
+labels_series = pd.Series(labels, name="label")
+# Concatenate the labels with the DataFrame
+df1_labeled = pd.concat([reduced_df1, labels_series], axis=1)
+df2_labeled = pd.concat([reduced_df2, labels_series], axis=1)
 # Plot the results
 plt.scatter(reduced_df1[:, 0], reduced_df1[:, 1], label='Video', alpha=0.5)
 plt.scatter(reduced_df2[:, 0], reduced_df2[:, 1], label='Manifesto', alpha=0.5)
+plt.scatter(centers[:, 0], centers[:, 1], s=200, alpha=0.5, c=df1_labeled["label"]) # Plot centers df1_labeled
+plt.scatter(centers[:, 0], centers[:, 1], s=200, alpha=0.5, c=df2_labeled["label"]) # Plot centers df2_labeled
 plt.legend()
-plt.title('PCA Video vs Manifesto BERT Embeddings')  # Set the title of the plot
+plt.title('PCA Reduced Video & Manifesto BERT Embeddings')  # Set the title of the plot
 plt.show()
 
 # Reduce the dimensionality of each dataframe
@@ -181,7 +192,7 @@ plt.show()
 data = pd.concat([reduced_df1, reduced_df2])
 # Fit a DBSCAN model to your data
 # Here, eps and min_samples are hyperparameters you may need to adjust based on your data
-dbscan = DBSCAN(eps=0.5, min_samples=5).fit(data)
+dbscan = DBSCAN(eps=0.7, min_samples=5).fit(data)
 # Add the DBSCAN cluster labels to your dataframe
 # Note that points labeled as -1 are considered noise by DBSCAN
 data['cluster'] = dbscan.labels_
