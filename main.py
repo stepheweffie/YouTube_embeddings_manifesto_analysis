@@ -40,7 +40,6 @@ cosine_similarity_plot(df1, df2)
 # vaex array of scaled embeddings for PCA
 vdf1 = vaex.from_pandas(df1_normalized)
 vdf2 = vaex.from_pandas(df2_normalized)
-
 # Remove NaN values
 vdf1.dropna()
 vdf2.dropna()
@@ -49,15 +48,13 @@ vdf2.dropna()
 data_array = np.concatenate((vdf1, vdf2), axis=0)
 ldf1 = len(vdf1)
 ldf2 = len(data_array) - ldf1
-print(ldf1, ldf2)
+data_array.sort()
+print(data_array.shape)
 
+data_array = vaex.from_arrays(x=vdf1, y=vdf2)
 # Make sure both arrays are of the same length
-if ldf1 != ldf2:
-    vdf1 = vdf1[:ldf2]
-
 # Initialize the KMeans model via vaex and fit the data
 kmeans = vaex.ml.cluster.KMeans(features=['x', 'y'], n_clusters=10)
-data_array = vaex.from_arrays(x=vdf1, y=vdf2)
 # Fit and transform the data
 kmeans.fit(data_array)
 df_trans = kmeans.transform(data_array)
