@@ -7,6 +7,7 @@ import pandas as pd
 from sklearn.cluster import KMeans
 import seaborn as sns
 import numpy as np
+import vaex
 
 
 def cosine_similarity_plot(manifesto, transcript):
@@ -24,13 +25,16 @@ def cosine_similarity_plot(manifesto, transcript):
     plt.show()
 
 
-def pca_reduce_dimensionality(dataframe):
+def pca_reduce_dimensionality(dataframe, l1, l2):
     # DataFrame of embeddings
     # Apply PCA to reduce the dimensionality to 2D
     pca = PCA(n_components=2)
-    embeddings_2d = pca.fit_transform(dataframe)
+    embeddings_1d = pca.fit_transform(dataframe[:l1])
+    embeddings_2d = pca.fit_transform(dataframe[l2:])
+    # Plot the results
     plt.figure(figsize=(8,6))
-    plt.scatter(embeddings_2d[:,0], embeddings_2d[:,1])
+    plt.scatter(embeddings_1d[:, 0], embeddings_1d[:, 1], label='Video', alpha=0.5)
+    plt.scatter(embeddings_2d[:, 0], embeddings_2d[:, 1], label='Manifesto', alpha=0.5)
     plt.xlabel('PC1')
     plt.ylabel('PC2')
     plt.title('2D PCA of Embeddings')
@@ -38,10 +42,11 @@ def pca_reduce_dimensionality(dataframe):
 
 
 def pca_kmeans_dimensionality(dataframe):
-    # Apply PCA to reduce the dimensionality to 2D
     # Perform k-means clustering
-    kmeans = KMeans(n_clusters=5)
-    labels = kmeans.fit_predict(dataframe)
+    kmeans = KMeans(n_clusters=5, random_state=0, n_init="auto").fit(dataframe)
+    centers = kmeans.cluster_centers_
+    labels = kmeans.labels_
+    print(labels)
     # Convert the labels to a Pandas Series object
     labels_series = pd.Series(labels, name="label")
     # Concatenate the labels with the DataFrame
@@ -51,6 +56,8 @@ def pca_kmeans_dimensionality(dataframe):
     pca_result = pca.fit_transform(df_labeled.drop(columns=["label"]))
     # Visualize the reduced-dimensional data using a scatter plot with color-coded labels
     plt.scatter(pca_result[:, 0], pca_result[:, 1], c=df_labeled["label"])
+    plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5);
+
     plt.show()
 
 
@@ -66,20 +73,6 @@ def hierarchy_plot(dataframe):
     dendrogram = hierarchy.dendrogram(linkage_matrix, ax=ax)
     ax.set_xlabel("Embeddings")
     ax.set_ylabel("Distance")
-    plt.show()
-
-
-def heatmap(corr_df1, corr_df2):
-    # Create a heatmap for each correlation matrix, and preserve the column labels
-    sns.heatmap(corr_df1, ax=ax[0], cmap='coolwarm', cbar=False)
-    ax[0].set_title('DataFrame 1 Correlation Heatmap')
-    ax[0].set_xticklabels(ax[0].get_xmajorticklabels(), fontsize=10)
-
-    sns.heatmap(corr_df2, ax=ax[1], cmap='coolwarm')
-    ax[1].set_title('DataFrame 2 Correlation Heatmap')
-    ax[1].set_xticklabels(ax[1].get_xmajorticklabels(), fontsize=10)
-
-    plt.tight_layout()
     plt.show()
 
 

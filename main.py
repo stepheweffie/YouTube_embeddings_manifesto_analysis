@@ -10,8 +10,12 @@ from sklearn.cluster import DBSCAN
 from sklearn.preprocessing import StandardScaler
 from sklearn.manifold import TSNE, MDS
 import umap
-from manifesto.visuals.dimensionality_visuals import cosine_similarity_plot, pca_reduce_dimensionality
+from manifesto.visuals.dimensionality_visuals import cosine_similarity_plot, pca_reduce_dimensionality, \
+    pca_kmeans_dimensionality
 from manifesto.visuals.correlation_matrices import networkx_graph
+import vaex
+import vaex.ml.cluster
+
 
 # create a scaler object
 scaler = StandardScaler()
@@ -27,32 +31,59 @@ pdf_data = data['pdf_embeddings']
 pdf_dataframe = pd.DataFrame(pdf_data)
 df2_normalized = pd.DataFrame(scaler.fit_transform(pdf_dataframe))
 
-# data = pd.read_pickle(f'manifesto/data/BertEmbeddingsTask/BertEmbeddingsTask__99914b932b-data.pkl')
-# data = pd.DataFrame(data)
-# data = pd.DataFrame(data['model'])
-# df1_normalized = pd.DataFrame(scaler.fit_transform(data['transcript_bert_embeddings'][0]))
-# df2_normalized = pd.DataFrame(scaler.fit_transform(data['pdf_bert_embeddings'][0]))
-
 df1 = video_dataframe
 df2 = pdf_dataframe
-# first_col = data.iloc[:, 0]  # iloc allows you to select by integer-based location
 
 # text-embeddings-ada-002 cosine similarity histogram
 cosine_similarity_plot(df1, df2)
 
-# data = scaler.fit_transform(data_array)
-# fit and transform the data for the BERT or the ada embeddings
+# vaex array of scaled embeddings for PCA
+vdf1 = vaex.from_pandas(df1_normalized)
+vdf2 = vaex.from_pandas(df2_normalized)
 
-# pca_reduce_dimensionality(data)
+# Remove NaN values
+vdf1.dropna()
+vdf2.dropna()
 
-# Detect
-# df1['similarities'] = df1.apply(lambda x: cosine_similarity(x, embedding))
-# df1.sort_values('similarities', ascending=False)
-# df2['similarities'] = df2.apply(lambda x: cosine_similarity(x, embedding))
-# df2.sort_values('similarities', ascending=False)
 
-correlation = df1.corrwith(df2, axis=1)
+data_array = np.concatenate((vdf1, vdf2), axis=0)
+ldf1 = len(vdf1)
+ldf2 = len(data_array) - ldf1
+# Make sure both arrays are of the same length
+if len(vdf1) > len(vdf2):
+    vdf2 = np.append(vdf2, [None] * (len(vdf1) - len(vdf2)))
+elif len(vdf2) > len(vdf1):
+    vdf1 = np.append(vdf1, [None] * (len(vdf2) - len(vdf1)))
+
+# Initialize the KMeans model via vaex and fit the data
+kmeans = vaex.ml.cluster.KMeans(features=['x', 'y'], n_clusters=10)
+data_array = vaex.from_arrays(x=vdf1, y=vdf2)
+# Fit and transform the data
+kmeans.fit(data_array)
+df_trans = kmeans.transform(data_array)
+df_trans['predicted_kmean_map'] = df_trans.prediction_kmeans.map(mapper={0: 1, 1: 2, 2: 0})
+print(df_trans)
+
+# PCA KMEANS dimensionality reduction
+# pca_reduce_dimensionality(data_array, ldf1, ldf2)
+# pca_kmeans_dimensionality(data_array)
+
+# Scale a data array
+data = pd.concat([df1, df2], axis=1)
+data = scaler.fit_transform(data)
+
+# Swarm plot
+# sns.swarmplot(data, size=2)
+# fit and transform the data for ada embeddings
+# plt.show()
+
+# KDE plot
+# sns.kdeplot(data, shade=True)
+# plt.show()
+
+
 # Histogram of correlation coefficients
+correlation = df1.corrwith(df2, axis=1)
 plt.figure(figsize=(8, 6))
 plt.hist(correlation, bins=50)
 plt.title('Histogram of Correlation Coefficients')
@@ -61,36 +92,47 @@ plt.ylabel('Frequency')
 plt.show()
 
 # 2. Line plot of correlation coefficients
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(8, 6))
 plt.plot(correlation)
 plt.title('Line Plot of Correlation Coefficients')
 plt.xlabel('Pair Index')
 plt.ylabel('Correlation Coefficient')
 plt.show()
 
-# concatenate the two dataframes along the columns
+# Concatenate the two dataframes along the columns
 df = pd.concat([df1, df2], axis=1)
-# calculate the correlation matrix
+# Calculate the correlation matrix
 corr_matrix = df.corr()
-
-# 3 Networkx graph of the correlation matrix
+# Networkx graph of the correlation matrix
 networkx_graph(corr_matrix)
-
+# networkx.algorithms.community.modularity_max.greedy_modularity_communities(corr_matrix)
+# Plot the correlation matrices
 # Assuming df1 and df2 are your two dataframes containing ada-002 embeddings
 similarity = cosine_similarity(df1.mean(axis=0).values.reshape(1, -1), df2.mean(axis=0).values.reshape(1, -1))
 print(f"The cosine similarity for OpenAI embeddings between the two documents is {similarity[0][0]}")
 # The cosine similarity between the two documents is 0.854043123080344
 
+# Begin BERT embeddings comparison
+data = pd.read_pickle(f'manifesto/data/BertEmbeddingsTask/BertEmbeddingsTask__99914b932b-data.pkl')
+data = pd.DataFrame(data)
+data = pd.DataFrame(data['model'])
+df1_normalized = pd.DataFrame(scaler.fit_transform(data['transcript_bert_embeddings'][0]))
+df2_normalized = pd.DataFrame(scaler.fit_transform(data['pdf_bert_embeddings'][0]))
+corr_df1 = df1_normalized.corr()
+corr_df2 = df2_normalized.corr()
+
+
 distances = distance.cdist(df1_normalized.values, df2_normalized.values, 'euclidean')
+
 # fitting the MDS with n_components as 2
 mds = MDS(n_components=2)
 projected_distances = mds.fit_transform(distances)
 plt.scatter(projected_distances[:, 0], projected_distances[:, 1])
 plt.show()
+
 # Assuming df1 and df2 are your dataframes, and that they are already normalized
 
 # Let's assume df2 has more columns than df1
-print(df1_normalized.shape[0], df2_normalized.shape[0])
 # Let's assume df2 has more rows than df1
 if df2_normalized.shape[0] > df1_normalized.shape[0]:
     # Calculate difference in number of rows
@@ -112,17 +154,6 @@ plt.scatter(reduced_df1[:, 0], reduced_df1[:, 1], label='Video', alpha=0.5)
 plt.scatter(reduced_df2[:, 0], reduced_df2[:, 1], label='Manifesto', alpha=0.5)
 plt.legend()
 plt.title('PCA Video vs Manifesto BERT Embeddings')  # Set the title of the plot
-plt.show()
-
-# Create a correlation matrix for each dataframe
-corr_df1 = df1_normalized.corr()
-corr_df2 = df2_normalized.corr()
-# Plot the correlation matrices
-fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(12, 5))
-sns.heatmap(corr_df1, ax=ax1, cmap='coolwarm', cbar=False)
-ax1.set_title('Correlation Matrix 1')
-sns.heatmap(corr_df2, ax=ax2, cmap='coolwarm', yticklabels=False)
-ax2.set_title('Correlation Matrix 2')
 plt.show()
 
 # Reduce the dimensionality of each dataframe
@@ -191,15 +222,12 @@ for i, component in enumerate(components):
         print(f"{feature}: {weight}")
     print("\n")
 
-# Concatenate your dataframes into one, for easier plotting
-concatenated_df = data
 
 # Create a pairplot
 sns.pairplot(data)
 plt.show()
 
 
-# First, you need to concatenate your two dataframes
 data = pd.concat([df1_normalized, df2_normalized])
 df1 = df1_normalized
 # Next, we'll use t-SNE to reduce the dimensionality of your embeddings to 2 dimensions
