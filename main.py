@@ -53,10 +53,7 @@ print(ldf1, ldf2)
 
 # Make sure both arrays are of the same length
 if ldf1 != ldf2:
-    if ldf1 > ldf2:
-        vdf1 = vdf1[:ldf2]
-    else:
-        vdf2 = vdf2[:ldf1]
+    vdf1 = vdf1[:ldf2]
 
 # Initialize the KMeans model via vaex and fit the data
 kmeans = vaex.ml.cluster.KMeans(features=['x', 'y'], n_clusters=10)
