@@ -13,8 +13,13 @@ import umap
 from manifesto.visuals.dimensionality_visuals import cosine_similarity_plot, pca_reduce_dimensionality, \
     pca_kmeans_dimensionality
 from manifesto.visuals.correlation_matrices import networkx_graph
-import vaex
 import vaex.ml.cluster
+from sentence_transformers import SentenceTransformer
+from sklearn.decomposition import LatentDirichletAllocation
+from sklearn.feature_extraction.text import CountVectorizer
+
+
+model = SentenceTransformer('bert-base-nli-mean-tokens')  # adjust model name as needed
 
 
 # create a scaler object
@@ -31,53 +36,76 @@ pdf_data = data['pdf_embeddings']
 pdf_dataframe = pd.DataFrame(pdf_data)
 df2_normalized = pd.DataFrame(scaler.fit_transform(pdf_dataframe))
 
+# Needs to be list of strings for SentenceTransformer
+video_text = f'manifesto/single_video.txt'
+pdf_text = f'manifesto/manifest.txt'
+document_list = [video_text, pdf_text]
+
+# Encode sentences to get their embeddings
+embedding1 = model.encode(video_text)
+embedding2 = model.encode(pdf_text)
+
 df1 = video_dataframe
 df2 = pdf_dataframe
+similarity_scores = cosine_similarity(df1, df2)
 
-# text-embeddings-ada-002 cosine similarity histogram
-cosine_similarity_plot(df1, df2)
+# Iterate over similarity scores and print pairs that exceed a certain threshold
+threshold = 0.8
+for i in range(len(df1)):
+    for j in range(len(df2)):
+        if similarity_scores[i, j] > threshold:
+            # Plot the cosine similarity scores
+            print(f"Vidso [{i}] is similar to Manifesto [{j}] with a similarity score of {similarity_scores[i, j]}")
+            # text-embeddings-ada-002 cosine similarity histogram
+            cosine_similarity_plot(df1, df2, similarity_scores[i, j])
+
+# Initialize CountVectorizer
+vectorizer = CountVectorizer(max_df=0.95, min_df=2, stop_words='english')
+# Fit and transform the processed titles
+count_data = vectorizer.fit_transform(document_list)
+# Initialize LDA Model with 10 topics
+lda = LatentDirichletAllocation(n_components=10, random_state=0)
+# Fit the model to the data
+lda.fit(count_data)
+# Get the words and their topic weights
+feature_names = vectorizer.get_feature_names_out()
+for topic_idx, topic in enumerate(lda.components_):
+    print("Topic #%d:" % topic_idx)
+    print(" ".join([feature_names[i] for i in topic.argsort()[:-10 - 1:-1]]))
 
 # vaex array of scaled embeddings for PCA
 vdf1 = vaex.from_pandas(df1_normalized)
 vdf2 = vaex.from_pandas(df2_normalized)
-# Remove NaN values
-vdf1.dropna()
-vdf2.dropna()
-
-
-data_array = np.concatenate((vdf1, vdf2), axis=0)
 ldf1 = len(vdf1)
-ldf2 = len(data_array) - ldf1
-data_array.sort()
-print(data_array.shape)
+ldf2 = len(vdf2)
 
-data_array = vaex.from_arrays(x=vdf1, y=vdf2)
-# Make sure both arrays are of the same length
-# Initialize the KMeans model via vaex and fit the data
-kmeans = vaex.ml.cluster.KMeans(features=['x', 'y'], n_clusters=10)
-# Fit and transform the data
-kmeans.fit(data_array)
-df_trans = kmeans.transform(data_array)
-df_trans['predicted_kmean_map'] = df_trans.prediction_kmeans.map(mapper={0: 1, 1: 2, 2: 0})
-print(df_trans)
 
-# PCA KMEANS dimensionality reduction
-# pca_reduce_dimensionality(data_array, ldf1, ldf2)
-# pca_kmeans_dimensionality(data_array)
+def vdf(difference, df):
+    df_new = pd.DataFrame(columns=df.columns, index=[i + len(df) + 1 for i in range(difference)])
+    resized = df1_normalized.merge(df_new, how='outer')
+    return resized
 
+
+if ldf1 != ldf2:
+    diff = ldf2 - ldf1
+    vdf1 = vdf(diff, df1_normalized)
+
+# data_array = vaex.from_pandas(vdf1, vdf2)
 # Scale a data array
 data = pd.concat([df1, df2], axis=1)
 data = scaler.fit_transform(data)
+data_array = np.vstack((df1_normalized.columns.values, df2_normalized.columns.values))
+# data_array = pd.concat([df1_normalized, df2_normalized], axis=1)
+# kmeans = vaex.ml.cluster.KMeans(features=vdf1, n_clusters=10).fit(data_array)
+# PCA KMEANS dimensionality reduction
+# KMeans clustering from scikit.cluster
+pca_reduce_dimensionality(data)
+pca_kmeans_dimensionality(data)
 
 # Swarm plot
 # sns.swarmplot(data, size=2)
 # fit and transform the data for ada embeddings
 # plt.show()
-
-# KDE plot
-# sns.kdeplot(data, shade=True)
-# plt.show()
-
 
 # Histogram of correlation coefficients
 correlation = df1.corrwith(df2, axis=1)

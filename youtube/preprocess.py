@@ -48,11 +48,12 @@ class PicklesToDFTask(d6tflow.tasks.TaskCachePandas):
         self.save(output)
 
 
-class TrainingPreprocessTask(d6tflow.tasks.TaskCachePandas):
+class TrainingPreprocessTask(d6tflow.tasks.TaskPickle):
     # Cache the original transcripts in a dict of dataframes
     def run(self):
         texts = list()
         tokens = list()
+        rows = list()
         text_tokens = list()
         pkl_files = glob.glob(f'{data_dir}/playlist/*.pkl')
         for pkl_file in pkl_files:
@@ -62,23 +63,18 @@ class TrainingPreprocessTask(d6tflow.tasks.TaskCachePandas):
                 for text in data:
                     text_tokens.append(tokens)
                     if len(text['text']) > 1:
-                        # sents.append(sent_tokenize(text['text']))
-                        texts.append(text['text'])
-                        # Tokenize, remove stop words, and lemmatize the text
-                        for word in nltk.word_tokenize(text['text']):  # Tokenize and lowercase
-                            if word.isalpha() and word not in stop_words:
-                                lem = lemmatizer.lemmatize(word)
-                                tokens.append(lem)# Lemmatize word
-                text_tokens.append(tokens)
+                        texts = text['text']
+                        tokens = word_tokenize(text['text'])
+                row = {'video_id': pkl_file, 'text': texts, 'tokens': tokens}
+                rows.append(row)
             except FileNotFoundError:
                 continue
             except KeyError:
                 print("KeyError occurred, Check Luigi For Status")
-        texts = pd.DataFrame(texts)
-        text_tokens = pd.DataFrame(text_tokens)
-        texts = {'texts': texts, 'tokens': text_tokens}
-        print(texts)
-        self.save(texts)
+        rows = pd.DataFrame(rows)
+        df = {'df': rows}
+        print(df)
+        self.save(df)
 
 
 class SearchDfTask(d6tflow.tasks.TaskPickle):
@@ -183,6 +179,5 @@ if __name__ == '__main__':
     # flow.run(PreprocessDataTask)
     flow.run(TrainingPreprocessTask)
     # flow.run(PicklesToDFTask)
-    data = flow.outputLoad(TrainingPreprocessTask)
-    print(data['text'])
+
 
